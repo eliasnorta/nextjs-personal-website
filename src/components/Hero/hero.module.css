@@ -1,0 +1,47 @@
+.container {
+  text-align: left;
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  background-image: url("/hero_background.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  max-height: 1700px;
+  display: flex;
+  align-items: center;
+}
+.wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+.subtitle_top {
+  color: var(--blue-light);
+  text-shadow: 0px 0px 10px #e2e2e240;
+  font-size: 1rem;
+}
+.title {
+  font-size: 6rem;
+  margin: 5px 0px;
+}
+.subtitle_bottom {
+  margin-top: 20px;
+  letter-spacing: 2px;
+  font-size: 1rem;
+}
+.socials {
+  margin-top: 2em;
+}
+.socials ul {
+  list-style-type: none;
+  display: flex;
+}
+.socials li a {
+  background-color: #464646;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  margin: 15px 15px;
+}

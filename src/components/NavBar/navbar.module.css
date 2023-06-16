@@ -1,0 +1,31 @@
+.header {
+  background-color: #1a1a1ab6;
+  border-bottom: 1px solid grey;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  z-index: var(--z-index-header);
+  margin-bottom: 2em;
+}
+
+.navbar_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 60px;
+}
+
+.nav_links ul {
+  display: flex;
+  list-style-type: none;
+  gap: 40px;
+  font-size: 0.9rem;
+  color: #9e9e9e;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 600px) {
+  .navbar_container {
+    justify-content: space-between;
+  }
+}
