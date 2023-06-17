@@ -9,4 +9,9 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  transition: 0.3s;
+}
+
+.container:hover {
+  opacity: 0.7;
 }

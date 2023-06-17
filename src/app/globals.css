@@ -5,11 +5,15 @@
 }
 
 :root {
+  --section-max-width: 1200px;
+  --max-width-widest: 1400px;
   --dark-background: #111;
   --border-grey: rgb(73, 73, 73);
+  --skills-icon-grey: #E6E6E6;
   --blue-light: #4478C9;
   --blue: #0F52BA;
   --border-radius: 15px;
+  --section-title: 1.8rem;
   --z-index-header: 6;
   --z-index-cursor: 3;
   --z-index-cursor-blur: 4;
@@ -46,8 +50,8 @@ body {
   background: linear-gradient(to right, rgba(160, 160, 239, 0.1), rgba(219, 210, 210, 0.1));
   border-radius: 100%;
   transform: translate(-50%, -50%);
-  -webkit-transition-duration: 100ms;
-  transition-duration: 100ms;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
   will-change: width, height, transform, border;

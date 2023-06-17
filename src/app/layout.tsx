@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="eliasnorta_icon.svg" />
+        <link rel="icon" href="favicon.png" />
       </head>
       <body className={inter.className}>
         <ThemeProvider>

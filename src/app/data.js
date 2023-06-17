@@ -49,66 +49,81 @@ export const items = {
     frameworks: [
       {
         id: 1,
-        name: "React.JS"
+        name: "React.JS",
+        icon: "/skills/react.svg"
       },
       {
         id: 2,
-        name: "Next.js"
+        name: "Next.js",
+        icon: "/skills/nextjs.svg"
       },
       {
         id: 3,
-        name: "jQuery"
+        name: "jQuery",
+        icon: "/skills/jquery.svg"
       },
       {
         id: 4,
-        name: "Flutter"
+        name: "Flutter",
+        icon: "/skills/flutter.svg"
       }
     ],
     languages: [
       {
         id: 1,
-        name: "JavaScript"
+        name: "JavaScript",
+        icon: "/skills/javascript.svg"
       },
       {
         id: 2,
-        name: "TypeScript"
+        name: "TypeScript",
+        icon: "/skills/typescript.svg"
       },
       {
         id: 3,
-        name: "Java"
+        name: "Java",
+        icon: "/skills/java.svg"
       },
       {
         id: 4,
-        name: "HTML"
+        name: "HTML",
+        icon: "/skills/html5.svg"
       },
       {
         id: 5,
-        name: "CSS"
+        name: "CSS",
+        icon: "/skills/css3.svg"
       },
       {
         id: 6,
-        name: "Dart"
+        name: "Dart",
+        icon: "/skills/dart.svg"
       },
       {
         id: 7,
-        name: "C#"
+        name: "C#",
+        icon: "/skills/c-sharp.svg"
       },
       {
         id: 8,
-        name: "PHP"
+        name: "PHP",
+        icon: "/skills/php.svg"
       }
     ],
     otherSkills: [
       {
         id: 1,
-        name: "Wordpress"
+        name: "Wordpress",
+        icon: "/skills/wordpress.svg"
       },
       {
         id: 2,
-        name: "GitHub"
+        name: "GitHub",
+        icon: "/skills/github.svg"
       },{
         id: 3,
-        name: "Figma"
+        name: "Figma",
+        icon: "/skills/figma.svg"
       },
     ]
     

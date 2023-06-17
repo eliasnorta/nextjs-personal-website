@@ -1,0 +1,36 @@
+.container {
+  border-top: 1px solid var(--border-grey);
+  padding: 4em 0;
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer_row:first-child {
+  margin-bottom: 140px;
+}
+.links {
+  display: flex;
+  list-style-type: none;
+}
+.socials_links {
+  gap: 20px;
+}
+.socials_links a {
+  background-color: #464646;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+}
+.page_links {
+  gap: 30px;
+}

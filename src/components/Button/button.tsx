@@ -2,20 +2,18 @@ import React from "react";
 import styles from "./button.module.css";
 import Link from "next/link";
 
-const Button = ({
-  text,
-  url,
-  icon,
-  target,
-}: {
+type ButtonProps = {
   text: string;
   url: string;
-  icon?: any;
+  icon?: React.ReactNode;
   target?: string;
-}) => {
+  type?: "button" | "submit" | "reset"; // Define the type prop to accept specific values
+};
+
+const Button = ({ text, url, icon, target, type = "button" }: ButtonProps) => {
   return (
     <Link href={url} target={target}>
-      <button className={styles.container}>
+      <button type={type} className={styles.container}>
         {text}
         {icon}
       </button>
