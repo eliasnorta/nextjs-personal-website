@@ -54,8 +54,32 @@
 }
 
 /* responsive - mobile */
-@media screen and (max-width: 400px) {
+@media (max-width: 800px) {
   .container {
-    /* color: red; */
+    padding: 3em 0;
+  }
+  .wrapper {
+    text-align: center;
+  }
+  .footer_row {
+    flex-direction: column;
+  }
+  .footer_row:first-child {
+    margin-bottom: 0px;
+  }
+  .footer_row:last-child {
+    flex-direction: column-reverse;
+  }
+  .socials_links {
+    margin: 3em 0;
+  }
+  .links {
+    justify-content: center;
+  }
+  .page_links {
+    margin-bottom: 3em;
+  }
+  .copyright_text {
+    color: #828282;
   }
 }

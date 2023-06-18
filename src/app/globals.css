@@ -32,12 +32,12 @@ body {
   transition: 1s all ease;
 }
 .light {
-  background-color: white;
+  background-color: var(--off-white);
   color: var(--dark-background);
 }
 .dark {
   background-color: var(--dark-background);
-  color: white;
+  color: var(--off-white);
 }
 
 /* custom cursor */

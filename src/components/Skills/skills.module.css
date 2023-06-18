@@ -17,9 +17,9 @@
 
 .desc {
   color: rgb(165, 165, 165);
-  width: 400px;
+  max-width: 500px;
   margin: 0 auto;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 .skills_container {

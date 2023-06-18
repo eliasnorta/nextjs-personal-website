@@ -4,11 +4,7 @@ export const items = {
       id: 1,
       image: "/projects/ZOF_BANNER_2.png",
       title: "Zone of War",
-      desc: `An action-packed first-person
-      shooter and strategy game!
-      Shoot and battle in different
-      worlds and find your way back
-      to your crew.
+      desc: `An action-packed first-person shooter and strategy game! Shoot and battle in different worlds and find your way back to your crew.
 
       Visit the Github repository
       <a href="/" target="_blank" rel="noopener noreferrer nofollow" style="text-decoration:underline; color: royalblue;">here</a>.

@@ -37,6 +37,7 @@ const Projects = () => {
       <div className={style.wrapper}>
         <h1 className={style.title}>MY PROJECTS</h1>
         <div className={style.projects}>
+          {/* print over the projects */}
           {projectsData.map((item) => (
             <div className={style.projects_item} key={item.id}>
               <div className={style.image_container}>

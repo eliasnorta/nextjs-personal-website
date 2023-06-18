@@ -38,7 +38,9 @@ const Footer = () => {
           </div>
         </div>
         <div className={style.footer_row}>
-          <p>Copyright © Elias Norta. All rights reserved</p>
+          <p className={style.copyright_text}>
+            Copyright © Elias Norta. All rights reserved
+          </p>
           <ul className={`${style.links} ${style.page_links}`}>
             <li>
               <Link href={"/"}>Privacy Policy</Link>
