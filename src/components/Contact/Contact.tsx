@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./contact.module.css";
-import Button from "../Button/button";
+import buttonStyle from "../Button/button.module.css";
 
 const Contact = () => {
   return (
@@ -8,7 +8,10 @@ const Contact = () => {
       <div className={style.wrapper}>
         <h1 className={style.title}>Get in touch</h1>
         <div className={style.form_container}>
-          <form action="" method="POST">
+          <form
+            action="https://formsubmit.co/6c95a40085637e3625e02451c3c8719e"
+            method="POST"
+          >
             <div className={style.input_container}>
               <label>
                 Your Name <span>*</span>
@@ -34,7 +37,9 @@ const Contact = () => {
               <textarea name="Message" id="" required cols={20} rows={6} />
             </div>
             <div className={style.button_conainer}>
-              <Button text="Submit" type="submit" url="" />
+              <button className={buttonStyle.container} type="submit">
+                Submit
+              </button>
             </div>
           </form>
         </div>

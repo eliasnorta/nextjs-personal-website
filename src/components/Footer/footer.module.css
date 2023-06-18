@@ -12,10 +12,20 @@
 .footer_row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 .footer_row:first-child {
   margin-bottom: 140px;
+}
+.footer_row:last-child {
+  color: var(--off-white);
+  align-items: center;
+}
+.image_and_text p {
+  color: #636363;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 10px;
+  line-height: 1.5;
 }
 .links {
   display: flex;
@@ -33,4 +43,19 @@
 }
 .page_links {
   gap: 30px;
+  text-decoration: underline;
+}
+.page_links li {
+  transform: 0.5s all;
+
+}
+.page_links li:hover {
+  opacity: 0.6;
+}
+
+/* responsive - mobile */
+@media screen and (max-width: 400px) {
+  .container {
+    /* color: red; */
+  }
 }

@@ -9,33 +9,36 @@ const Footer = () => {
     <footer className={style.container}>
       <div className={style.wrapper}>
         <div className={style.footer_row}>
-          <Link href={"/"}>
-            <Image
-              src="/eliasnorta_icon.svg"
-              alt="/eliasnorta_icons.svg"
-              width={80}
-              height={80}
-            />
-          </Link>
-
-          <ul className={`${style.links} ${style.socials_links}`}>
-            <li>
-              <Link href={"/"}>
-                <BsLinkedin size={20} />
-              </Link>
-            </li>
-            <li>
-              <Link href={"/"}>
-                <BsGithub size={20} />
-              </Link>
-            </li>
-          </ul>
+          <div className={style.image_and_text}>
+            <Link href={"/"}>
+              <Image
+                src="/eliasnorta_icon.svg"
+                alt="/eliasnorta_icons.svg"
+                width={80}
+                height={80}
+              />
+            </Link>
+            <p>
+              Designed and developed by <br /> Elias Norta
+            </p>
+          </div>
+          <div>
+            <ul className={`${style.links} ${style.socials_links}`}>
+              <li>
+                <Link href={"/"}>
+                  <BsLinkedin size={20} />
+                </Link>
+              </li>
+              <li>
+                <Link href={"/"}>
+                  <BsGithub size={20} />
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
         <div className={style.footer_row}>
-          <p>
-            Copyright © Elias Norta. All rights reserved | Designed and
-            developed by Elias Norta
-          </p>
+          <p>Copyright © Elias Norta. All rights reserved</p>
           <ul className={`${style.links} ${style.page_links}`}>
             <li>
               <Link href={"/"}>Privacy Policy</Link>

@@ -32,9 +32,10 @@ const Skills = () => {
       <div className={style.wrapper}>
         <h1 className={style.title}>MY SKILLS AND EXPERIENCE</h1>
         <p className={style.desc}>
-          I initially got into programming and developing in 2017 when I wanted
-          to create a mobile game and started learning game development with
-          Unity. I then released it on the Google Play Store.
+          My experiences with coding first began in 2017 when I wanted to create
+          a mobile game and started learning game development with Unity. I then
+          released it on the Google Play Store. Fast forward to today I have
+          learned the many acpects of web development.
         </p>
         <div className={style.skills_container}>
           <div className={style.skills_group}>
