@@ -4,7 +4,7 @@ import buttonStyle from "../Button/button.module.css";
 
 const Contact = () => {
   return (
-    <section className={style.container}>
+    <section id="contact" className={style.container}>
       <div className={style.wrapper}>
         <h1 className={style.title}>Get in touch</h1>
         <div className={style.form_container}>

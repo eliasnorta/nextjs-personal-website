@@ -13,7 +13,7 @@
   --skills-icon-grey: #E6E6E6;
   --blue-light: #4478C9;
   --blue: #0F52BA;
-  --border-radius: 15px;
+  --border-radius: clamp(15px, 2vw, 21px);
   --section-title: 1.8rem;
   --z-index-header: 6;
   --z-index-cursor: 3;

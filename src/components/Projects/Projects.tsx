@@ -2,14 +2,15 @@ import React from "react";
 import { items } from "../../app/data.js";
 import { notFound } from "next/navigation";
 import style from "./projects.module.css";
-import Link from "next/link.js";
 import Image from "next/image.js";
 import Button from "../Button/button";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import TestButton from "../testButton/TestButton";
 
 type ItemType = {
   id: number;
   title: string;
+  date: number;
   image: any;
   desc: string;
   cta: string;
@@ -33,7 +34,7 @@ const Projects = () => {
   const projectsData = getData("projects") as ItemType[];
 
   return (
-    <section className={style.container}>
+    <section id="projects" className={style.container}>
       <div className={style.wrapper}>
         <h1 className={style.title}>MY PROJECTS</h1>
         <div className={style.projects}>
@@ -45,6 +46,7 @@ const Projects = () => {
               </div>
               <div className={style.text_container}>
                 <h1 className={style.projects_title}>{item.title}</h1>
+                <small className={style.projects_date}>{item.date}</small>
                 <p
                   className={style.projects_description}
                   dangerouslySetInnerHTML={{ __html: item.desc }}
@@ -62,6 +64,9 @@ const Projects = () => {
               </div>
             </div>
           ))}
+          <div className={style.showall_button}>
+            <TestButton />
+          </div>
         </div>
       </div>
     </section>

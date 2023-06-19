@@ -28,7 +28,7 @@ const Skills = () => {
   const skillsData = getData("skills") as SkillsType;
 
   return (
-    <section className={style.container}>
+    <section id="skills" className={style.container}>
       <div className={style.wrapper}>
         <h1 className={style.title}>MY SKILLS AND EXPERIENCE</h1>
         <p className={style.desc}>

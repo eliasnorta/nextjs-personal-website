@@ -28,7 +28,9 @@ const Navbar = () => {
                 <Link href="#skills">My skills</Link>
               </li>
               <li>
-                <Link href="#contact">Get in touch</Link>
+                <Link href="#contact" scroll={false}>
+                  Get in touch
+                </Link>
               </li>
             </ul>
           </nav>
