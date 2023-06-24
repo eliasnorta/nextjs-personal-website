@@ -19,7 +19,7 @@ const Footer = () => {
               />
             </Link>
             <p>
-              Designed and developed by <br /> Elias Norta
+              Designed & Developed by <br /> Elias Norta
             </p>
           </div>
           <div>

@@ -3,6 +3,8 @@ import { items } from "../../app/data.js";
 import { notFound } from "next/navigation";
 import style from "./skills.module.css";
 import Image from "next/image";
+import MotionWrapper from "../Animations/MotionWrapper";
+import MotionList from "../Animations/MotionList";
 
 type SkillsType = {
   frameworks: { id: number; name: string; icon: any }[];
@@ -28,21 +30,21 @@ const Skills = () => {
   const skillsData = getData("skills") as SkillsType;
 
   return (
-    <section id="skills" className={style.container}>
-      <div className={style.wrapper}>
-        <h1 className={style.title}>MY SKILLS AND EXPERIENCE</h1>
-        <p className={style.desc}>
-          My experiences with coding first began in 2017 when I wanted to create
-          a mobile game and started learning game development with Unity. I then
-          released it on the Google Play Store. Fast forward to today I have
-          learned the many acpects of web development.
-        </p>
-        <div className={style.skills_container}>
-          <div className={style.skills_group}>
-            <h2>Frameworks</h2>
-            <ul>
-              {skillsData.frameworks.map((framework) => (
-                <li key={framework.id}>
+    <MotionWrapper id="skills">
+      <section className={style.container}>
+        <div className={style.wrapper}>
+          <h1 className={style.title}>MY SKILLS AND EXPERIENCE</h1>
+          <p className={style.desc}>
+            My experiences with coding first began in 2017 when I wanted to
+            create a mobile game and started learning game development with
+            Unity. I then released it on the Google Play Store. Fast forward to
+            today I have learned the many acpects of web development.
+          </p>
+          <div className={style.skills_container}>
+            <div className={style.skills_group}>
+              <h2>Frameworks</h2>
+              <MotionList
+                items={skillsData.frameworks.map((framework) => (
                   <div className={style.skill_item}>
                     <Image
                       src={framework.icon}
@@ -52,15 +54,14 @@ const Skills = () => {
                     />
                     {framework.name}
                   </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className={style.skills_group}>
-            <h2>Languages</h2>
-            <ul>
-              {skillsData.languages.map((language) => (
-                <li key={language.id}>
+                ))}
+              />
+            </div>
+
+            <div className={style.skills_group}>
+              <h2>Languages</h2>
+              <MotionList
+                items={skillsData.languages.map((language) => (
                   <div className={style.skill_item}>
                     <Image
                       src={language.icon}
@@ -70,15 +71,14 @@ const Skills = () => {
                     />
                     {language.name}
                   </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className={style.skills_group}>
-            <h2>Other skills</h2>
-            <ul>
-              {skillsData.otherSkills.map((other) => (
-                <li key={other.id}>
+                ))}
+              />
+            </div>
+
+            <div className={style.skills_group}>
+              <h2>Other skills</h2>
+              <MotionList
+                items={skillsData.otherSkills.map((other) => (
                   <div className={style.skill_item}>
                     <Image
                       src={other.icon}
@@ -88,13 +88,13 @@ const Skills = () => {
                     />
                     {other.name}
                   </div>
-                </li>
-              ))}
-            </ul>
+                ))}
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </MotionWrapper>
   );
 };
 

@@ -1,33 +1,69 @@
+"use client";
 import React from "react";
 import style from "./hero.module.css";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import Link from "next/link";
+import { motion as m } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className={style.container}>
+    <m.section
+      initial={{ opacity: 0, y: -20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
+      viewport={{ once: true }}
+      className={style.container}
+    >
       <div className={style.wrapper}>
-        <h4 className={style.subtitle_top}>HELLO, MY NAME IS</h4>
-        <h1 className={style.title}>Elias Norta</h1>
-        <h4 className={style.subtitle_bottom}>
+        <m.h4
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className={style.subtitle_top}
+        >
+          HELLO, MY NAME IS
+        </m.h4>
+        <m.h1
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeOut", duration: 1, delay: 0.5 }}
+          className={style.title}
+        >
+          Elias Norta
+        </m.h1>
+        <m.h4
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className={style.subtitle_bottom}
+        >
           I'M A DEVELOPER FROM FINLAND 👨🏼‍💻🇫🇮
-        </h4>
+        </m.h4>
+
         <div className={style.socials}>
           <ul>
-            <li>
+            <m.li
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.8 }}
+            >
               <Link href="">
                 <BsLinkedin size={20} />
               </Link>
-            </li>
-            <li>
+            </m.li>
+            <m.li
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.9 }}
+            >
               <Link href="">
                 <BsGithub size={20} />
               </Link>
-            </li>
+            </m.li>
           </ul>
         </div>
       </div>
-    </section>
+    </m.section>
   );
 };
 
