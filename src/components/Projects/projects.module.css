@@ -2,8 +2,8 @@
   border-bottom: 1px solid var(--border-grey);
   padding-bottom: 6em;
   padding-top: 2em;
-  background: linear-gradient(var(--dark-background), #1f1f1f);
-  scroll-margin-top: 60px;
+  background: linear-gradient(#00000000, #49494931);
+  /* scroll-margin-top: 60px; */
 }
 
 .wrapper {
@@ -29,21 +29,25 @@
   border-radius: var(--border-radius);
   width: 100%;
   z-index: var(--z-index-above-cursor);
-  background-color: var(--dark-background);
+  background-color: var(--component-background-2);
+  transition: var(--theme-transition);
 }
 
 .projects_title {
   /* margin-bottom: 5px; */
+  color: var(--text-color-title);
+  transition: var(--theme-transition);
 }
 .projects_date {
   color: rgb(129, 129, 129);
   font-weight: bold;
 }
 .projects_description {
-  color: rgb(210, 210, 210);
+  color: var(--text-color);
   white-space: pre-line;
   /* line-height: 0.6; */
   margin-top: 15px;
+  transition: var(--theme-transition);
 }
 
 .text_container {

@@ -1,6 +1,5 @@
 "use client";
 import Projects from "@/components/Projects/Projects";
-import styles from "./page.module.css";
 import Skills from "@/components/Skills/Skills";
 import Contact from "@/components/Contact/Contact";
 import Hero from "@/components/Hero/Hero";
@@ -13,7 +12,7 @@ export default function Home() {
   const contactSection = useRef(null);
 
   return (
-    <main className={styles.main}>
+    <main>
       <Navbar
         projectsSection={projectsSection}
         skillsSection={skillsSection}

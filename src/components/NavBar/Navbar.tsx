@@ -4,7 +4,9 @@ import style from "./navbar.module.css";
 import Image from "next/image";
 import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
 import Link from "next/link";
-import { forwardRef } from "react";
+import { forwardRef, useEffect, useState } from "react";
+
+type SectionType = "projects" | "skills" | "contact" | null;
 
 const Navbar = forwardRef(
   ({
@@ -16,6 +18,47 @@ const Navbar = forwardRef(
     skillsSection: any;
     contactSection: any;
   }) => {
+    // the active section
+    const [activeSection, setActiveSection] = useState<SectionType>(null);
+
+    // handle which section is in view using intersectionobserver
+    useEffect(() => {
+      const options = {
+        rootMargin: "-30%",
+      };
+
+      // observer for projects section
+      const projectsObserver = new IntersectionObserver(([entry]) => {
+        setActiveSection(entry.isIntersecting ? "projects" : null);
+      }, options);
+      projectsObserver.observe(projectsSection.current);
+
+      // observer for skills section
+      // const skillsObserver = new IntersectionObserver(([entry]) => {
+      //   setActiveSection(entry.isIntersecting ? "skills" : null);
+      // }, options);
+      // skillsObserver.observe(skillsSection.current);
+
+      // observer for cotact section
+      // const contactObserver = new IntersectionObserver(([entry]) => {
+      //   setActiveSection(entry.isIntersecting ? "contact" : null);
+      // }, options);
+      // contactObserver.observe(contactSection.current);
+
+      return () => {
+        projectsObserver.disconnect();
+        // skillsObserver.disconnect();
+        // contactObserver.disconnect();
+      };
+    }, []);
+
+    // scroll to section on click
+    const scrollToSection = (sectionRef: any) => {
+      sectionRef.current.scrollIntoView({
+        behavior: "smooth",
+      });
+    };
+
     return (
       <header className={style.header}>
         <div className={style.navbar_container}>
@@ -24,8 +67,8 @@ const Navbar = forwardRef(
               <Image
                 src="eliasnorta_icon.svg"
                 alt="Logo"
-                width={40}
-                height={40}
+                width={30}
+                height={35}
               />
             </Link>
           </div>
@@ -33,29 +76,26 @@ const Navbar = forwardRef(
             <nav>
               <ul>
                 <li
-                  onClick={() =>
-                    projectsSection.current.scrollIntoView({
-                      behavior: "smooth",
-                    })
-                  }
+                  className={`${
+                    activeSection === "projects" ? style.element_visible : ""
+                  }`}
+                  onClick={() => scrollToSection(projectsSection)}
                 >
                   My projects
                 </li>
                 <li
-                  onClick={() =>
-                    skillsSection.current.scrollIntoView({
-                      behavior: "smooth",
-                    })
-                  }
+                  className={`${
+                    activeSection === "skills" ? style.element_visible : ""
+                  }`}
+                  onClick={() => scrollToSection(skillsSection)}
                 >
                   My skills
                 </li>
                 <li
-                  onClick={() =>
-                    contactSection.current.scrollIntoView({
-                      behavior: "smooth",
-                    })
-                  }
+                  className={`${
+                    activeSection === "contact" ? style.element_visible : ""
+                  }`}
+                  onClick={() => scrollToSection(contactSection)}
                 >
                   Get in touch
                 </li>

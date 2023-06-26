@@ -1,7 +1,7 @@
 .container {
   padding: 7em 0;
   border-bottom: 1px solid var(--border-grey);
-  scroll-margin-top: 70px;
+  /* scroll-margin-top: 70px; */
 }
 
 .wrapper {
@@ -17,7 +17,7 @@
 }
 
 .desc {
-  color: rgb(165, 165, 165);
+  color: var(--text-color);
   max-width: 500px;
   margin: 0 auto;
   line-height: 1.7;
@@ -61,6 +61,8 @@
 .skills_group li {
   font-weight: bold;
   color: var(--skills-icon-grey);
+  filter: var(--svg-color);
+  transition: var(--theme-transition);
 }
 .skills_group img {
   margin-bottom: 10px;
@@ -70,6 +72,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.skill_item svg {
 }
 
 /* responsive - tablet */

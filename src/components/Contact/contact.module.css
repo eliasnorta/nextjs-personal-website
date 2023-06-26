@@ -1,7 +1,7 @@
 
 .container {
   padding: 7em 0;
-  scroll-margin-top: 30px;
+  /* scroll-margin-top: 30px; */
 }
 
 .wrapper {
@@ -18,11 +18,12 @@
 
 .form_container {
   position: relative;
-  background-color: #1F1F1F;
+  background-color: var(--component-background-1)/*#1F1F1F*/;
   padding: 2em;
   border-radius: var(--border-radius);
   border: 1px solid var(--border-grey);
   z-index: var(--z-index-above-cursor);
+  transition: var(--theme-transition);
 }
 
 .input_container {
@@ -33,21 +34,26 @@
   text-align: left;
   margin: 12px 0;
   font-size: 0.9rem;
-  color: rgb(170, 170, 170);
+  color: var(--text-color);
   font-weight: bold;
 }
 .input_container span {
   color: red;
 }
 .input_container input, .input_container textarea {
-  background-color: #1F1F1F;
+  background-color: var(--component-background-1);
   border: 1px solid var(--border-grey);
   line-height: 30px;
   border-radius: 7px;
-  color: white;
+  color: var(--text-color-2);
   padding: 3px 10px;
   margin-bottom: 10px;
   font-size: 1rem;
+  transition: var(--theme-transition);
+}
+.input_container textarea {
+  resize: vertical;
+  min-height: 50px;
 }
 
 .button_conainer {

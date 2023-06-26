@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useContext } from "react";
 import style from "./contact.module.css";
 import buttonStyle from "../Button/button.module.css";
 import MotionWrapper from "../Animations/MotionWrapper";

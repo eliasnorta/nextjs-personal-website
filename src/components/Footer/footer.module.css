@@ -17,7 +17,7 @@
   margin-bottom: 140px;
 }
 .footer_row:last-child {
-  color: var(--off-white);
+  /* color: var(--off-white); */
   align-items: center;
 }
 .image_and_text p {
@@ -36,6 +36,7 @@
 }
 .socials_links a {
   background-color: #464646;
+  color: var(--off-white);
   padding: 18px;
   display: flex;
   align-items: center;
@@ -46,12 +47,13 @@
   text-decoration: underline;
 }
 .page_links li {
-  transform: 0.5s all;
-
+  transition: 0.2s;
 }
+
 .page_links li:hover {
   opacity: 0.6;
 }
+
 
 /* responsive - mobile */
 @media (max-width: 800px) {
@@ -79,7 +81,5 @@
   .page_links {
     margin-bottom: 3em;
   }
-  .copyright_text {
-    color: #828282;
-  }
+  
 }

@@ -1,5 +1,5 @@
 "use client";
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import styles from "./DarkModeToggle.module.css";
 import { ThemeContext } from "@/context/ThemeContext";
 import Image from "next/image";
@@ -9,6 +9,14 @@ const DarkModeToggle = () => {
   const { toggle, mode } = useContext(ThemeContext);
 
   const [toggleDirection, setToggleDirection] = useState(0);
+
+  // use the store value
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme) {
+      setToggleDirection(storedTheme === "dark" ? 20 : 0);
+    }
+  }, []);
 
   const toggleOn = () => {
     setToggleDirection(toggleDirection === 0 ? 20 : 0);
@@ -31,7 +39,7 @@ const DarkModeToggle = () => {
         }}
         className={styles.icon}
       >
-        <Image src={"/moon.svg"} alt="sun" width={15} height={15} />
+        <Image src={"/moon.svg"} alt="moon icon" width={15} height={15} />
       </motion.div>
       <motion.div
         animate={{
@@ -46,7 +54,7 @@ const DarkModeToggle = () => {
         }}
         className={styles.icon}
       >
-        <Image src={"/sun.svg"} alt="sun" width={15} height={15} />
+        <Image src={"/sun.svg"} alt="sun icon" width={15} height={15} />
       </motion.div>
       <motion.div
         animate={{
