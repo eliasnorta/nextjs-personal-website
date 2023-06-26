@@ -1,6 +1,7 @@
 .container {
   padding: 7em 0;
   border-bottom: 1px solid var(--border-grey);
+  scroll-margin-top: 70px;
 }
 
 .wrapper {

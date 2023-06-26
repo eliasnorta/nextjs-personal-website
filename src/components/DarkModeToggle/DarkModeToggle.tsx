@@ -21,9 +21,13 @@ const DarkModeToggle = () => {
       <motion.div
         animate={{
           scale: toggleDirection === 0 ? 0 : 1,
+          x: toggleDirection === 0 ? 5 : 0,
+          rotate: toggleDirection === 0 ? -90 : 0,
         }}
         transition={{
-          duration: 0.2,
+          duration: 0.4,
+          type: "spring",
+          stiffness: 150,
         }}
         className={styles.icon}
       >
@@ -32,9 +36,13 @@ const DarkModeToggle = () => {
       <motion.div
         animate={{
           scale: toggleDirection === 0 ? 1 : 0,
+          x: toggleDirection === 0 ? 0 : -5,
+          rotate: toggleDirection === 0 ? 0 : 90,
         }}
         transition={{
-          duration: 0.2,
+          duration: 0.4,
+          type: "spring",
+          stiffness: 150,
         }}
         className={styles.icon}
       >

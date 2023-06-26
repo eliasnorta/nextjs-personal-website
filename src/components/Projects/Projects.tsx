@@ -1,13 +1,13 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { items } from "../../app/data.js";
 import { notFound } from "next/navigation";
 import style from "./projects.module.css";
 import Image from "next/image.js";
 import Button from "../Button/button";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import TestButton from "../testButton/TestButton";
 import MotionWrapper from "../Animations/MotionWrapper";
 
+// declaring types for projects data that is mapped
 type ItemType = {
   id: number;
   title: string;
@@ -20,23 +20,23 @@ type ItemType = {
 type ItemsType = {
   projects: ItemType[];
 };
-
+// getting data from js file
 const getData = (cat: keyof ItemsType) => {
   const data = items[cat];
 
   if (data) {
     return data;
   }
-
+  // if no data found, show not found
   return notFound();
 };
 
-const Projects = () => {
+const Projects = forwardRef<HTMLDivElement>(({}, ref) => {
   const projectsData = getData("projects") as ItemType[];
 
   return (
-    <MotionWrapper id="projects">
-      <section className={style.container}>
+    <MotionWrapper id="test">
+      <section ref={ref} className={style.container}>
         <div className={style.wrapper}>
           <h1 className={style.title}>MY PROJECTS</h1>
           <div className={style.projects}>
@@ -66,14 +66,11 @@ const Projects = () => {
                 </div>
               </div>
             ))}
-            <div className={style.showall_button}>
-              <TestButton />
-            </div>
           </div>
         </div>
       </section>
     </MotionWrapper>
   );
-};
+});
 
 export default Projects;

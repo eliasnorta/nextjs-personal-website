@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { motion as m } from "framer-motion";
 
@@ -8,7 +7,7 @@ const MotionWrapper = ({
   id,
 }: {
   children: React.ReactNode;
-  id: string;
+  id?: any;
 }) => {
   return (
     <m.div
@@ -22,5 +21,4 @@ const MotionWrapper = ({
     </m.div>
   );
 };
-
 export default MotionWrapper;

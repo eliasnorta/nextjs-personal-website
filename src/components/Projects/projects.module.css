@@ -3,6 +3,7 @@
   padding-bottom: 6em;
   padding-top: 2em;
   background: linear-gradient(var(--dark-background), #1f1f1f);
+  scroll-margin-top: 60px;
 }
 
 .wrapper {
@@ -76,13 +77,5 @@
   }
   .projects_item:nth-child(n + 3) {
     display: none;
-  }
-  .showall_button {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-  }
-  .show_all_projects {
-    display: block;
   }
 }

@@ -1,7 +1,6 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Footer from "@/components/Footer/Footer";
-import Navbar from "@/components/NavBar/Navbar";
 import { ThemeProvider } from "@/context/ThemeContext";
 import CustomCursor from "@/components/Cursor/Cursor";
 
@@ -25,7 +24,6 @@ export default function RootLayout({
         <ThemeProvider>
           <div className="container">
             <CustomCursor />
-            <Navbar />
             {children}
             <Footer />
           </div>

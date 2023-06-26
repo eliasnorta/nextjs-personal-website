@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { items } from "../../app/data.js";
 import { notFound } from "next/navigation";
 import style from "./skills.module.css";
@@ -26,12 +26,12 @@ const getData = (cat: keyof ItemsType) => {
   return notFound();
 };
 
-const Skills = () => {
+const Skills = forwardRef<HTMLDivElement>(({}, ref) => {
   const skillsData = getData("skills") as SkillsType;
 
   return (
     <MotionWrapper id="skills">
-      <section className={style.container}>
+      <section ref={ref} className={style.container}>
         <div className={style.wrapper}>
           <h1 className={style.title}>MY SKILLS AND EXPERIENCE</h1>
           <p className={style.desc}>
@@ -96,6 +96,6 @@ const Skills = () => {
       </section>
     </MotionWrapper>
   );
-};
+});
 
 export default Skills;

@@ -1,12 +1,12 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import style from "./contact.module.css";
 import buttonStyle from "../Button/button.module.css";
 import MotionWrapper from "../Animations/MotionWrapper";
 
-const Contact = () => {
+const Contact = forwardRef<HTMLDivElement>(({}, ref) => {
   return (
     <MotionWrapper id="contact">
-      <section className={style.container}>
+      <section ref={ref} className={style.container}>
         <div className={style.wrapper}>
           <h1 className={style.title}>Get in touch</h1>
           <div className={style.form_container}>
@@ -49,6 +49,6 @@ const Contact = () => {
       </section>
     </MotionWrapper>
   );
-};
+});
 
 export default Contact;
