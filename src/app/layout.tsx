@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider>
           <div className="container">
-            <CustomCursor />
+            {/* <CustomCursor /> */}
             {children}
             <Footer />
           </div>

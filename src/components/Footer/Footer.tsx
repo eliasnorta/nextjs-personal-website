@@ -43,10 +43,10 @@ const Footer = () => {
           </p>
           <ul className={`${style.links} ${style.page_links}`}>
             <li>
-              <Link href={"/"}>Privacy Policy</Link>
+              <Link href={"/privacy-policy"}>Privacy Policy</Link>
             </li>
             <li>
-              <Link href={"/"}>Terms of Service</Link>
+              <Link href={"/terms-of-service"}>Terms of Service</Link>
             </li>
           </ul>
         </div>
