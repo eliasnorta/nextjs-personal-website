@@ -71,4 +71,9 @@
   .form_container {
     padding: 15px;
   }
+
+  .container {
+    scroll-margin-top: -30px;
+
+  }
 }

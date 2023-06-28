@@ -6,7 +6,7 @@ import style from "./hamburgerMenu.module.css";
 const HamburgerMenu = ({ sections }: { sections: any }) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
-  const menuRef = useRef<HTMLUListElement | null>(null);
+  const menuRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handler = (event: any) => {
@@ -35,9 +35,12 @@ const HamburgerMenu = ({ sections }: { sections: any }) => {
 
   return (
     <div>
-      <div className={style.button}>
+      {/* button for opening and closing nav menu */}
+      <div
+        className={style.button}
+        onClick={() => setNavbarOpen((prev) => !prev)}
+      >
         <Image
-          onClick={() => setNavbarOpen((prev) => !prev)}
           src={navbarOpen ? "./menu_close_icon.svg" : "./menu_icon.svg"}
           alt="menu icon"
           width={30}
@@ -45,12 +48,14 @@ const HamburgerMenu = ({ sections }: { sections: any }) => {
         />
       </div>
 
+      {/* the nav menu */}
       <div
+        ref={menuRef}
         className={`${style["menu-nav"]} ${
           navbarOpen ? style["show-menu"] : ""
         }`}
       >
-        <ul ref={menuRef}>
+        <ul>
           {sections.map((section: any, index: any) => (
             <li key={index} onClick={() => scrollToSection(section.ref)}>
               {section.label}

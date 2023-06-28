@@ -82,4 +82,8 @@
   /* .projects_item:nth-child(n + 3) {
     display: none;
   } */
+  .container {
+    scroll-margin-top: 50px;
+
+  }
 }

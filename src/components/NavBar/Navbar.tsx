@@ -54,7 +54,10 @@ const Navbar = forwardRef(({ sections }: { sections: any }) => {
   return (
     <header className={style.header}>
       <div className={style.navbar_container}>
-        <div className={style.logo}>
+        <div
+          className={style.logo}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
           <Link href="/">
             <Image
               src="eliasnorta_icon.svg"
@@ -67,30 +70,6 @@ const Navbar = forwardRef(({ sections }: { sections: any }) => {
         <div className={style.nav_links}>
           <nav>
             <ul>
-              {/* <li
-                  // className={`${
-                  //   activeSection === "projects" ? style.element_visible : ""
-                  // }`}
-                  onClick={() => scrollToSection(projectsSection)}
-                >
-                  My projects
-                </li>
-                <li
-                  // className={`${
-                  //   activeSection === "skills" ? style.element_visible : ""
-                  // }`}
-                  onClick={() => scrollToSection(skillsSection)}
-                >
-                  My skills
-                </li>
-                <li
-                  // className={`${
-                  //   activeSection === "contact" ? style.element_visible : ""
-                  // }`}
-                  onClick={() => scrollToSection(contactSection)}
-                >
-                  Get in touch
-                </li> */}
               {sections.map((section: any, index: any) => (
                 <li key={index} onClick={() => scrollToSection(section.ref)}>
                   {section.label}

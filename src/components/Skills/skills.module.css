@@ -94,3 +94,10 @@
     margin-bottom: 1.5em;
   }
 }
+
+/* mobile responsive */
+@media (max-width: 600px) {
+  .container {
+    scroll-margin-top: -70px;
+  }
+}
