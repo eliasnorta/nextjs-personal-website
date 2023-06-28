@@ -37,13 +37,25 @@
   opacity: 0.5;
 }
 
+.menu {
+  display: none;
+}
+
 /* Mobile responsive */
 @media screen and (max-width: 600px) {
   .navbar_container {
     justify-content: space-between;
-    margin: 0 10px;
+    margin: 0 15px;
   }
   .nav_links {
     display: none;
+  }
+  .menu {
+    display: block;
+  }
+  .nav_row_end {
+    display: flex;
+    gap: 10px;
+    align-items: center;
   }
 }

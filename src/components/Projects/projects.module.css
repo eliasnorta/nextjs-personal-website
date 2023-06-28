@@ -3,7 +3,7 @@
   padding-bottom: 6em;
   padding-top: 2em;
   background: linear-gradient(#00000000, #49494931);
-  /* scroll-margin-top: 60px; */
+  scroll-margin-top: 70px;
 }
 
 .wrapper {
@@ -79,7 +79,7 @@
   .projects {
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   }
-  .projects_item:nth-child(n + 3) {
+  /* .projects_item:nth-child(n + 3) {
     display: none;
-  }
+  } */
 }

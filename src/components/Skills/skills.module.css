@@ -1,7 +1,7 @@
 .container {
   padding: 10em 0;
   border-bottom: 1px solid var(--border-grey);
-  /* scroll-margin-top: 70px; */
+  scroll-margin-top: -20px;
 }
 
 .wrapper {

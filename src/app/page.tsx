@@ -11,13 +11,15 @@ export default function Home() {
   const skillsSection = useRef(null);
   const contactSection = useRef(null);
 
+  const sections = [
+    { label: "Projects", ref: projectsSection },
+    { label: "Skills", ref: skillsSection },
+    { label: "Contact", ref: contactSection },
+  ];
+
   return (
     <main>
-      <Navbar
-        projectsSection={projectsSection}
-        skillsSection={skillsSection}
-        contactSection={contactSection}
-      />
+      <Navbar sections={sections} />
       <Hero />
       <Projects ref={projectsSection} />
       <Skills ref={skillsSection} />
