@@ -37,15 +37,15 @@ const HamburgerMenu = ({ sections }: { sections: any }) => {
     <div>
       {/* button for opening and closing nav menu */}
       <div
-        className={style.button}
+        className={
+          navbarOpen ? `${style.button} ${style.open}` : `${style.button}`
+        }
         onClick={() => setNavbarOpen((prev) => !prev)}
       >
-        <Image
-          src={navbarOpen ? "./menu_close_icon.svg" : "./menu_icon.svg"}
-          alt="menu icon"
-          width={30}
-          height={30}
-        />
+        <div className={style.button_wrapper}>
+          <span />
+          <span />
+        </div>
       </div>
 
       {/* the nav menu */}

@@ -1,3 +1,47 @@
+/* button styles */
+
+.button {
+  cursor: pointer;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /* border: 1px solid white; */
+}
+.button_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+
+.button_wrapper span {
+  height: 2px;
+  width: 35px;
+  background: var(--text-color-2);
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+.button_wrapper span:last-child {
+  width: 25px;
+  margin-top: 8px;
+  background: darkgray;
+}
+
+.open span:first-child {
+  transform: rotate(-45deg) translate(-1px, 1px);
+  width: 24px;
+}
+.open span:last-child {
+  transform: rotate(45deg) translate(0px, -1px);
+  margin-top: 0px;
+  background-color: var(--text-color-2);
+}
+
+/* menu styles */
 .menu-nav {
   list-style: none;
   position: absolute;
@@ -26,8 +70,4 @@
 }
 .menu-nav li:hover {
   opacity: 0.7;
-}
-
-.button {
-  cursor: pointer;
 }
