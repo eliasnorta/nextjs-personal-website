@@ -45,7 +45,7 @@ const Skills = forwardRef<HTMLDivElement>(({}, ref) => {
               <h2>Frameworks</h2>
               <MotionList
                 items={skillsData.frameworks.map((framework) => (
-                  <div className={style.skill_item}>
+                  <div className={style.skill_item} key={framework.id}>
                     <Image
                       src={framework.icon}
                       alt={framework.icon}
@@ -62,7 +62,7 @@ const Skills = forwardRef<HTMLDivElement>(({}, ref) => {
               <h2>Languages</h2>
               <MotionList
                 items={skillsData.languages.map((language) => (
-                  <div className={style.skill_item}>
+                  <div className={style.skill_item} key={language.id}>
                     <Image
                       src={language.icon}
                       alt={language.icon}
@@ -79,7 +79,7 @@ const Skills = forwardRef<HTMLDivElement>(({}, ref) => {
               <h2>Other skills</h2>
               <MotionList
                 items={skillsData.otherSkills.map((other) => (
-                  <div className={style.skill_item}>
+                  <div className={style.skill_item} key={other.id}>
                     <Image
                       src={other.icon}
                       alt={other.icon}
@@ -97,5 +97,7 @@ const Skills = forwardRef<HTMLDivElement>(({}, ref) => {
     </MotionWrapper>
   );
 });
+
+Skills.displayName = "Skills";
 
 export default Skills;

@@ -89,4 +89,6 @@ const Navbar = forwardRef(({ sections }: { sections: any }) => {
   );
 });
 
+Navbar.displayName = "NavBar";
+
 export default Navbar;

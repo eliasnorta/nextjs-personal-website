@@ -37,7 +37,7 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.5 }}
           className={style.subtitle_bottom}
         >
-          I'M A DEVELOPER FROM FINLAND 👨🏼‍💻🇫🇮
+          I&apos;M A DEVELOPER FROM FINLAND 👨🏼‍💻🇫🇮
         </m.h4>
 
         <div className={style.socials}>
