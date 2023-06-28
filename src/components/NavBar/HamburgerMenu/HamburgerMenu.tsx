@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React, { useState, useRef, useEffect } from "react";
 import style from "./hamburgerMenu.module.css";
 
@@ -7,13 +6,16 @@ const HamburgerMenu = ({ sections }: { sections: any }) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   const menuRef = useRef<HTMLDivElement | null>(null);
+  const buttonRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handler = (event: any) => {
       if (
         navbarOpen &&
         menuRef.current &&
-        !menuRef.current.contains(event.target)
+        !menuRef.current.contains(event.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target)
       ) {
         setNavbarOpen(false);
       }
@@ -37,6 +39,7 @@ const HamburgerMenu = ({ sections }: { sections: any }) => {
     <div>
       {/* button for opening and closing nav menu */}
       <div
+        ref={buttonRef}
         className={
           navbarOpen ? `${style.button} ${style.open}` : `${style.button}`
         }

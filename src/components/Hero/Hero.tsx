@@ -47,7 +47,11 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.8 }}
             >
-              <Link href="">
+              <Link
+                href="https://fi.linkedin.com/in/elias-norta?trk=people-guest_people_search-card"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
                 <BsLinkedin size={20} />
               </Link>
             </m.li>
@@ -56,7 +60,11 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.9 }}
             >
-              <Link href="">
+              <Link
+                href="https://github.com/eliasnorta"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
                 <BsGithub size={20} />
               </Link>
             </m.li>

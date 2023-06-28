@@ -25,12 +25,20 @@ const Footer = () => {
           <div>
             <ul className={`${style.links} ${style.socials_links}`}>
               <li>
-                <Link href={"/"}>
+                <Link
+                  href="https://fi.linkedin.com/in/elias-norta?trk=people-guest_people_search-card"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
                   <BsLinkedin size={20} />
                 </Link>
               </li>
               <li>
-                <Link href={"/"}>
+                <Link
+                  href="https://github.com/eliasnorta"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
                   <BsGithub size={20} />
                 </Link>
               </li>
