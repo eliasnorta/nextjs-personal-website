@@ -98,6 +98,6 @@
 /* mobile responsive */
 @media (max-width: 600px) {
   .container {
-    scroll-margin-top: -70px;
+    scroll-margin-top: -50px;
   }
 }

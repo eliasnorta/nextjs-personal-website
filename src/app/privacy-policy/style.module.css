@@ -9,14 +9,12 @@
   max-width: 1000px;
   margin: 0 auto;
   white-space: pre-line;
-  padding: 4em 0em;
+  padding: 2em 0em;
   z-index: var(--z-index-above-cursor);
   color: var(--text-color-2);
   transition: var(--theme-transition);
   width: 90%;
 }
-
-
 
 .wrapper h1 {
   font-size: 24px;
@@ -41,4 +39,11 @@
 .wrapper a {
   /* color: #007bff; */
   text-decoration: none;
+}
+
+/* Responsive: Mobile - Tablet */
+@media (max-width: 700px) {
+  .wrapper {
+    padding: 0em 0em;
+  }
 }
