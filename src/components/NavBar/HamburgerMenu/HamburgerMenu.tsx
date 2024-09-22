@@ -5,9 +5,11 @@ import style from "./hamburgerMenu.module.css";
 const HamburgerMenu = ({ sections }: { sections: any }) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
+  // for functionality to close nav menu when clicked outside of it. The refs are used to detech when clicked on a button
   const menuRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLDivElement | null>(null);
 
+  // close the navbar when clicked outside of it
   useEffect(() => {
     const handler = (event: any) => {
       if (
