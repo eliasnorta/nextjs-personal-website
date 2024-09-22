@@ -11,7 +11,7 @@ export const items = {
       <a href="/" target="_blank" rel="noopener noreferrer nofollow" style="text-decoration:underline; color: royalblue;">here</a>.
 
       Visit the Steam page <a href="/" target="_blank" rel="noopener noreferrer nofollow" style="text-decoration:underline; color: royalblue;">here</a>.`,
-      cta: "zoneofwar.com"
+      cta: "zoneofwar.com",
     },
     {
       id: 2,
@@ -23,7 +23,7 @@ export const items = {
       Visit the Github repository <a href="/" target="_blank" rel="noopener noreferrer nofollow" style="text-decoration:underline; color: royalblue;">here</a>.
       
       Visit the website <a href="/" target="_blank" rel="noopener noreferrer nofollow" style="text-decoration:underline; color: royalblue;">here</a>.`,
-      cta: "finkickz.com"
+      cta: "finkickz.com",
     },
     {
       id: 3,
@@ -31,7 +31,7 @@ export const items = {
       title: "Taitaja 2023 Web-Dev",
       date: 2023,
       desc: `I participated in the Taitaja 2023 Web-dev semiginal competition.`,
-      cta: "taitaja2023.fi"
+      cta: "taitaja2023.fi",
     },
     {
       id: 4,
@@ -50,85 +50,85 @@ export const items = {
       {
         id: 1,
         name: "React.JS",
-        icon: "/skills/react.svg"
+        icon: "/skills/react.svg",
       },
       {
         id: 2,
         name: "Next.js",
-        icon: "/skills/nextjs.svg"
+        icon: "/skills/nextjs.svg",
       },
       {
         id: 3,
         name: "jQuery",
-        icon: "/skills/jquery.svg"
+        icon: "/skills/jquery.svg",
       },
       {
         id: 4,
         name: "Flutter",
-        icon: "/skills/flutter.svg"
-      }
+        icon: "/skills/flutter.svg",
+      },
     ],
     languages: [
       {
         id: 1,
         name: "JavaScript",
-        icon: "/skills/javascript.svg"
+        icon: "/skills/javascript.svg",
       },
       {
         id: 2,
         name: "TypeScript",
-        icon: "/skills/typescript.svg"
+        icon: "/skills/typescript.svg",
       },
       {
         id: 3,
         name: "Java",
-        icon: "/skills/java.svg"
+        icon: "/skills/java.svg",
       },
       {
         id: 4,
         name: "HTML",
-        icon: "/skills/html5.svg"
+        icon: "/skills/html5.svg",
       },
       {
         id: 5,
         name: "CSS",
-        icon: "/skills/css3.svg"
+        icon: "/skills/css3.svg",
       },
       {
         id: 6,
         name: "Dart",
-        icon: "/skills/dart.svg"
+        icon: "/skills/dart.svg",
       },
       {
         id: 7,
         name: "C#",
-        icon: "/skills/c-sharp.svg"
+        icon: "/skills/c-sharp.svg",
       },
       {
         id: 8,
         name: "PHP",
-        icon: "/skills/php.svg"
-      }
+        icon: "/skills/php.svg",
+      },
     ],
     otherSkills: [
       {
         id: 1,
         name: "Wordpress",
-        icon: "/skills/wordpress.svg"
+        icon: "/skills/wordpress.svg",
       },
       {
         id: 2,
         name: "GitHub",
-        icon: "/skills/github.svg"
-      },{
+        icon: "/skills/github.svg",
+      },
+      {
         id: 3,
         name: "Figma",
-        icon: "/skills/figma.svg"
+        icon: "/skills/figma.svg",
       },
-    ]
-    
-  }
-}
+    ],
+  },
+};
 
 // items.projects.forEach((project) => {
 //   project.desc = project.desc.replace(/\n/g, "<br>");
