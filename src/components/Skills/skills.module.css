@@ -62,7 +62,8 @@
   font-weight: bold;
   color: var(--skills-icon-grey);
   filter: var(--svg-color);
-  transition: var(--theme-transition);
+  /* transition: var(--theme-transition); */
+  transition: filter 1s ease;
 }
 .skills_group img {
   margin-bottom: 10px;
