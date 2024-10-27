@@ -2,48 +2,42 @@ export const items = {
   projects: [
     {
       id: 1,
+      image: "/projects/finkickz_banner.png",
+      title: "Finkickz",
+      date: 2023,
+      desc: `Buy and sell limited edition sneakers in Finland with ease.`,
+
+      cta: "finkickz.com",
+    },
+    {
+      id: 2,
       image: "/projects/ZOF_BANNER_2.png",
       title: "Zone of War",
       date: 2022,
       desc: `An action-packed first-person shooter and strategy game! Shoot and battle in different worlds and find your way back to your crew.
 
-      Visit the Github repository
-      <a href="/" target="_blank" rel="noopener noreferrer nofollow" style="text-decoration:underline; color: royalblue;">here</a>.
-
-      Visit the Steam page <a href="/" target="_blank" rel="noopener noreferrer nofollow" style="text-decoration:underline; color: royalblue;">here</a>.`,
+      Visit the Steam page <a href="https://store.steampowered.com/app/1488000/Zone_Of_War/" target="_blank" rel="noopener noreferrer nofollow" style="text-decoration:underline; color: royalblue;">here</a>.`,
       cta: "zoneofwar.com",
     },
-    {
-      id: 2,
-      image: "/projects/finkickz_banner.png",
-      title: "Finkickz",
-      date: 2023,
-      desc: `Buy and sell limited edition sneakers in Finland with ease.
+    // {
+    //   id: 3,
+    //   image: "/projects/thumbnail_Taitaja2023.png",
+    //   title: "Taitaja 2023 Web-Dev",
+    //   date: 2023,
+    //   desc: `I participated in the Taitaja 2023 Web-dev semiginal competition.`,
+    //   cta: "taitaja2023.fi",
+    // },
+    // {
+    //   id: 4,
+    //   image: "/projects/webstore_home-design.png",
+    //   title: "React e-commerce",
+    //   date: 2020,
+    //   desc: `An Amazon-like e-commerce store built using React.
 
-      Visit the Github repository <a href="/" target="_blank" rel="noopener noreferrer nofollow" style="text-decoration:underline; color: royalblue;">here</a>.
+    //   The website includes functionalities such as adding products to cart, private routing and login functionality with Firebase. Using react router v6.
       
-      Visit the website <a href="/" target="_blank" rel="noopener noreferrer nofollow" style="text-decoration:underline; color: royalblue;">here</a>.`,
-      cta: "finkickz.com",
-    },
-    {
-      id: 3,
-      image: "/projects/thumbnail_Taitaja2023.png",
-      title: "Taitaja 2023 Web-Dev",
-      date: 2023,
-      desc: `I participated in the Taitaja 2023 Web-dev semiginal competition.`,
-      cta: "taitaja2023.fi",
-    },
-    {
-      id: 4,
-      image: "/projects/webstore_home-design.png",
-      title: "React e-commerce",
-      date: 2020,
-      desc: `An Amazon-like e-commerce store built using React.
-
-      The website includes functionalities such as adding products to cart, private routing and login functionality with Firebase. Using react router v6.
-      
-      Visit the GitHub repository <a href="/" target="_blank" rel="noopener noreferrer nofollow" style="text-decoration:underline; color: royalblue;">here</a>.`,
-    },
+    //   Visit the GitHub repository <a href="/" target="_blank" rel="noopener noreferrer nofollow" style="text-decoration:underline; color: royalblue;">here</a>.`,
+    // },
   ],
   skills: {
     frameworks: [

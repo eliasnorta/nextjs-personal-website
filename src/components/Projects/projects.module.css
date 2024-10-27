@@ -12,16 +12,17 @@
 }
 
 .title {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   text-align: center;
   font-size: var(--section-title);
 }
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+  grid-gap: 35px;
   margin: 15px;
+  justify-content: center;
 }
 
 .projects_item {
