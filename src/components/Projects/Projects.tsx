@@ -49,7 +49,7 @@ const Projects = forwardRef<HTMLDivElement>(({}, ref) => {
                 </div>
                 <div className={style.text_container}>
                   <h1 className={style.projects_title}>{item.title}</h1>
-                  <small className={style.projects_date}>{item.date}</small>
+                  {/* <small className={style.projects_date}>{item.date}</small> */}
                   <p
                     className={style.projects_description}
                     dangerouslySetInnerHTML={{ __html: item.desc }}
