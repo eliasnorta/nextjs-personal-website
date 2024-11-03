@@ -4,7 +4,10 @@ import Footer from "@/components/Footer/Footer";
 import { ThemeProvider } from "@/context/ThemeContext";
 import CustomCursor from "@/components/Cursor/Cursor";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata = {
   title: "Elias Norta",
@@ -16,11 +19,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.className}>
       <head>
         <link rel="icon" href="favicon.png" />
       </head>
-      <body className={inter.className}>
+      <body>
         <ThemeProvider>
           <div className="container">
             {/* <CustomCursor /> */}
