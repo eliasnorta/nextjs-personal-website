@@ -35,10 +35,9 @@ const Skills = forwardRef<HTMLDivElement>(({}, ref) => {
         <div className={style.wrapper}>
           <h1 className={style.title}>MY SKILLS AND EXPERIENCE</h1>
           <p className={style.desc}>
-            My experiences with coding first began in 2017 when I wanted to
-            create a mobile game and started learning game development with
-            Unity. I then released it on the Google Play Store. Fast forward to
-            today I have learned the many acpects of web development.
+            My coding career began in 2018 with game development. I released two
+            games before transitioning into web development, which is my main
+            interest today.
           </p>
           <div className={style.skills_container}>
             <div className={style.skills_group}>
