@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Footer from "@/components/Footer/Footer";
 import { ThemeProvider } from "@/context/ThemeContext";
 import CustomCursor from "@/components/Cursor/Cursor";
+import Loading from "./loading";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default function RootLayout({
         <ThemeProvider>
           <div className="container">
             {/* <CustomCursor /> */}
+            {/* <Loading /> */}
             {children}
             <Footer />
           </div>
