@@ -75,7 +75,7 @@ const Skills = forwardRef<HTMLDivElement>(({}, ref) => {
             </div>
 
             <div className={style.skills_group}>
-              <h2>Other skills</h2>
+              <h2>Other related</h2>
               <MotionList
                 items={skillsData.otherSkills.map((other) => (
                   <div className={style.skill_item} key={other.id}>
