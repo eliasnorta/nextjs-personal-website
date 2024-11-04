@@ -4,6 +4,7 @@ import Footer from "@/components/Footer/Footer";
 import { ThemeProvider } from "@/context/ThemeContext";
 import CustomCursor from "@/components/Cursor/Cursor";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({
             {children}
             <Footer />
             <SpeedInsights />
+            <Analytics />
           </div>
         </ThemeProvider>
       </body>
