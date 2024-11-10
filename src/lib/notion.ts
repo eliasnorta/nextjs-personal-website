@@ -12,7 +12,7 @@ export const fetchPages = React.cache(() => {
     database_id: process.env.SECRET_NOTION_BLOG_DATABASE_ID!,
     filter: {
       property: 'Status',
-      select: {
+      status: {
         equals: 'Live',
       }
     }

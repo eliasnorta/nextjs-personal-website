@@ -5,7 +5,7 @@ import Contact from "@/components/Contact/Contact";
 import Hero from "@/components/Hero/Hero";
 import Navbar from "@/components/NavBar/Navbar";
 import { useRef } from "react";
-import { fetchPages } from "@/lib/notion";
+import BlogPosts from "@/components/BlogPosts/BlogPosts";
 
 export default async function Home() {
   const projectsSection = useRef(null);
@@ -18,12 +18,11 @@ export default async function Home() {
     { label: "Contact", ref: contactSection },
   ];
 
-  // const posts = await fetchPages();
-
   return (
     <main>
       <Navbar sections={sections} />
       <Hero />
+      <BlogPosts />
       <Projects ref={projectsSection} />
       <Skills ref={skillsSection} />
       <Contact ref={contactSection} />
