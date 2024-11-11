@@ -1,4 +1,5 @@
-import React, { forwardRef } from "react";
+"use client";
+import React from "react";
 import { items } from "../../app/data.js";
 import { notFound } from "next/navigation";
 import style from "./projects.module.css";
@@ -32,12 +33,12 @@ const getData = (cat: keyof ItemsType) => {
   return notFound();
 };
 
-const Projects = forwardRef<HTMLDivElement>(({}, ref) => {
+function Projects({ id }: { id: string }) {
   const projectsData = getData("projects") as ItemType[];
 
   return (
-    <MotionWrapper id="test">
-      <section ref={ref} className={style.container}>
+    <MotionWrapper id={id}>
+      <section className={style.container}>
         <div className={style.wrapper}>
           <h1 className={style.title}>MY PROJECTS</h1>
           <div className={style.projects}>
@@ -72,7 +73,7 @@ const Projects = forwardRef<HTMLDivElement>(({}, ref) => {
       </section>
     </MotionWrapper>
   );
-});
+}
 
 Projects.displayName = "Projects";
 

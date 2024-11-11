@@ -3,13 +3,21 @@ import style from "./navbar.module.css";
 import Image from "next/image";
 import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
 import Link from "next/link";
-import { forwardRef /*, useEffect, useState*/ } from "react";
 import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
 
 // for detecting section that is in view
 // type SectionType = "projects" | "skills" | "contact" | null;
 
-const Navbar = forwardRef(({ sections }: { sections: any }) => {
+interface Section {
+  label: string;
+  id: string;
+}
+
+interface NavbarProps {
+  sections: Section[];
+}
+
+const Navbar = ({ sections }: NavbarProps) => {
   // the active section
   // const [activeSection, setActiveSection] = useState<SectionType>(null);
 
@@ -45,10 +53,17 @@ const Navbar = forwardRef(({ sections }: { sections: any }) => {
   // }, []);
 
   // scroll to section on click
-  const scrollToSection = (sectionRef: any) => {
-    sectionRef.current.scrollIntoView({
-      behavior: "smooth",
-    });
+  // const scrollToSection = (sectionRef: any) => {
+  //   sectionRef.current.scrollIntoView({
+  //     behavior: "smooth",
+  //   });
+  // };
+
+  const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -56,7 +71,7 @@ const Navbar = forwardRef(({ sections }: { sections: any }) => {
       <div className={style.navbar_container}>
         <div
           className={style.logo}
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          // onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           <Link href="/">
             <Image
@@ -71,8 +86,15 @@ const Navbar = forwardRef(({ sections }: { sections: any }) => {
           <nav>
             <ul>
               {sections.map((section: any, index: any) => (
-                <li key={index} onClick={() => scrollToSection(section.ref)}>
-                  {section.label}
+                <li
+                  key={index}
+                  // onClick={(e) => {
+                  //   e.preventDefault();
+                  //   handleScroll(section.id);
+                  // }}
+                >
+                  <Link href={"#" + section.id}>{section.label}</Link>
+                  {/* {section.label} */}
                 </li>
               ))}
             </ul>
@@ -87,7 +109,7 @@ const Navbar = forwardRef(({ sections }: { sections: any }) => {
       </div>
     </header>
   );
-});
+};
 
 Navbar.displayName = "NavBar";
 
