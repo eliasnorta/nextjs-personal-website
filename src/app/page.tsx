@@ -16,10 +16,10 @@ export default async function Home() {
     <main>
       <Navbar sections={sections} />
       <Hero />
-      {/* <BlogPosts /> */}
+      <BlogPosts />
       <Projects id={sections[0].id} />
-      {/* <Skills id={sections[1].id} /> */}
-      {/*<Contact id={sections[2].id} /> */}
+      <Skills id={sections[1].id} />
+      <Contact id={sections[2].id} />
     </main>
   );
 }

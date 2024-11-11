@@ -1,4 +1,5 @@
-import React, { forwardRef } from "react";
+"use client";
+import React from "react";
 import { items } from "../../app/data.js";
 import { notFound } from "next/navigation";
 import style from "./skills.module.css";
@@ -26,12 +27,12 @@ const getData = (cat: keyof ItemsType) => {
   return notFound();
 };
 
-const Skills = forwardRef<HTMLDivElement>(({}, ref) => {
+const Skills = ({ id }: { id: string }) => {
   const skillsData = getData("skills") as SkillsType;
 
   return (
-    <MotionWrapper id="skills">
-      <section ref={ref} className={style.container}>
+    <MotionWrapper id={id}>
+      <section className={style.container}>
         <div className={style.wrapper}>
           <h1 className={style.title}>MY SKILLS AND EXPERIENCE</h1>
           <p className={style.desc}>
@@ -95,7 +96,7 @@ const Skills = forwardRef<HTMLDivElement>(({}, ref) => {
       </section>
     </MotionWrapper>
   );
-});
+};
 
 Skills.displayName = "Skills";
 

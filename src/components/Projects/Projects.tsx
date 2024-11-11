@@ -37,8 +37,8 @@ function Projects({ id }: { id: string }) {
   const projectsData = getData("projects") as ItemType[];
 
   return (
-    <MotionWrapper id={id}>
-      <section className={style.container}>
+    <MotionWrapper>
+      <section id={id} className={style.container}>
         <div className={style.wrapper}>
           <h1 className={style.title}>MY PROJECTS</h1>
           <div className={style.projects}>
