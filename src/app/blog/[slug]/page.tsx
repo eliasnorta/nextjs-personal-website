@@ -3,10 +3,11 @@ import { fetchBySlug, fetchPageBlocks, notion } from "@/lib/notion";
 import { NotionRenderer } from "@notion-render/client";
 import hljsPlugin from "@notion-render/hljs-plugin";
 import bookmarkPlugin from "@notion-render/bookmark-plugin";
+import Link from "next/link";
 // import "./tailwind.css";
 
 export default async function Page({ params }: { params: { slug: string } }) {
-  require("./tailwind.css");
+  // require("./tailwind.css");
   const post = await fetchBySlug(params.slug);
 
   if (!post) {
@@ -25,6 +26,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const html = await renderer.render(...blocks);
 
   return (
-    <div className="prose" dangerouslySetInnerHTML={{ __html: html }}></div>
+    <section>
+      <div>
+        <Link href="/">Back</Link>
+      </div>
+      <div className="prose" dangerouslySetInnerHTML={{ __html: html }}></div>
+    </section>
   );
 }

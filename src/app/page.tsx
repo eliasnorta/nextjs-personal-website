@@ -7,19 +7,20 @@ import BlogPosts from "@/components/BlogPosts/BlogPosts";
 
 export default async function Home() {
   const sections = [
-    { label: "Projects", id: "projectsSection" },
-    { label: "Skills", id: "skillsSection" },
-    { label: "Contact", id: "contactSection" },
+    { label: "Blog", id: "blog" },
+    { label: "Projects", id: "projects" },
+    { label: "Skills", id: "skills" },
+    { label: "Contact", id: "contact" },
   ];
 
   return (
     <main>
       <Navbar sections={sections} />
       <Hero />
-      <BlogPosts />
-      <Projects id={sections[0].id} />
-      <Skills id={sections[1].id} />
-      <Contact id={sections[2].id} />
+      <BlogPosts id={sections[0].id} />
+      <Projects id={sections[1].id} />
+      <Skills id={sections[2].id} />
+      <Contact id={sections[3].id} />
     </main>
   );
 }

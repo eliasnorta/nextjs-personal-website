@@ -1,0 +1,15 @@
+.container {
+  
+  scroll-margin-top: 70px;
+}
+
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.title {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: var(--section-title);
+}
