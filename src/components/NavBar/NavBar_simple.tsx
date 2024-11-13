@@ -14,7 +14,7 @@ const SimpleNavbar = () => {
         <div className={style.logo}>
           <Link href="/">
             <Image
-              src="eliasnorta_icon.svg"
+              src="/eliasnorta_icon.svg"
               alt="Logo"
               width={30}
               height={35}

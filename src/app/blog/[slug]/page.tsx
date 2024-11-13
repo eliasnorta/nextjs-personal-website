@@ -4,6 +4,7 @@ import { NotionRenderer } from "@notion-render/client";
 import hljsPlugin from "@notion-render/hljs-plugin";
 import bookmarkPlugin from "@notion-render/bookmark-plugin";
 import Link from "next/link";
+import SimpleNavbar from "@/components/NavBar/NavBar_simple";
 // import "./tailwind.css";
 
 export default async function Page({ params }: { params: { slug: string } }) {
@@ -26,11 +27,14 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const html = await renderer.render(...blocks);
 
   return (
-    <section>
-      <div>
-        <Link href="/">Back</Link>
-      </div>
-      <div className="prose" dangerouslySetInnerHTML={{ __html: html }}></div>
-    </section>
+    <>
+      <SimpleNavbar />
+      <section>
+        <div>
+          <Link href="/">Back</Link>
+        </div>
+        <div className="prose" dangerouslySetInnerHTML={{ __html: html }}></div>
+      </section>
+    </>
   );
 }
