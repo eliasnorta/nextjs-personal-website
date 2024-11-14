@@ -46,18 +46,23 @@ export default async function BlogPosts({ id }: { id: string }) {
         <h1 className={style.title}>BLOG POSTS</h1>
         <ul className={style.posts}>
           {posts.results.map((post: any) => (
-            <article key={post.id}>
+            <article className={style.post} key={post.id}>
               <Link
                 href={`/blog/${post.properties.slug.rich_text[0].plain_text}`}
               >
-                <Image
+                {/* <Image
                   src={post.properties.BannerImageUrl.rich_text[0].plain_text}
                   alt="Banner"
                   height={100}
                   width={100}
-                />
-                <h3>{post.properties.Title.title[0].plain_text}</h3>
-                <p>{getToday(post.properties.Date.last_edited_time)}</p>
+                /> */}
+                <p className={style.post_date}>
+                  {getToday(post.properties.Date.last_edited_time)}
+                </p>
+                <h3 className={style.post_title}>
+                  {post.properties.Title.title[0].plain_text}
+                </h3>
+                <h4 className={style.post_subtitle}>Tutorial • 5 min read</h4>
               </Link>
             </article>
           ))}
