@@ -38,35 +38,41 @@ function getToday(datestring: string) {
 export default async function BlogPosts({ id }: { id: string }) {
   const posts = await fetchPages();
 
+  if (!posts) {
+    return <div>404 Post not found :/</div>;
+  }
+
   console.log("posts: " + posts);
 
   return (
     <section id={id} className={style.container}>
       <div className={style.wrapper}>
         <h1 className={style.title}>BLOG POSTS</h1>
-        <ul className={style.posts}>
+        <div className={style.posts}>
           {posts.results.map((post: any) => (
             <article className={style.post} key={post.id}>
-              <Link
-                href={`/blog/${post.properties.slug.rich_text[0].plain_text}`}
-              >
-                {/* <Image
+              <div className={style.post_container}>
+                <Link
+                  href={`/blog/${post.properties.slug.rich_text[0].plain_text}`}
+                >
+                  {/* <Image
                   src={post.properties.BannerImageUrl.rich_text[0].plain_text}
                   alt="Banner"
                   height={100}
                   width={100}
                 /> */}
-                <p className={style.post_date}>
-                  {getToday(post.properties.Date.last_edited_time)}
-                </p>
-                <h3 className={style.post_title}>
-                  {post.properties.Title.title[0].plain_text}
-                </h3>
-                <h4 className={style.post_subtitle}>Tutorial • 5 min read</h4>
-              </Link>
+                  <p className={style.post_date}>
+                    {getToday(post.properties.Date.last_edited_time)}
+                  </p>
+                  <h3 className={style.post_title}>
+                    {post.properties.Title.title[0].plain_text}
+                  </h3>
+                  <h4 className={style.post_subtitle}>Tutorial • 5 min read</h4>
+                </Link>
+              </div>
             </article>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   );

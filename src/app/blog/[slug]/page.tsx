@@ -6,6 +6,7 @@ import bookmarkPlugin from "@notion-render/bookmark-plugin";
 import Link from "next/link";
 import SimpleNavbar from "@/components/NavBar/NavBar_simple";
 // import "./tailwind.css";
+import style from "./style.module.css";
 
 export default async function Page({ params }: { params: { slug: string } }) {
   // require("./tailwind.css");
@@ -29,11 +30,16 @@ export default async function Page({ params }: { params: { slug: string } }) {
   return (
     <>
       <SimpleNavbar />
-      <section>
+      <section className={style.container}>
         <div>
           <Link href="/">Back</Link>
         </div>
-        <div className="prose" dangerouslySetInnerHTML={{ __html: html }}></div>
+        <div className={style.content_wrapper}>
+          <div
+            className="prose"
+            dangerouslySetInnerHTML={{ __html: html }}
+          ></div>
+        </div>
       </section>
     </>
   );
