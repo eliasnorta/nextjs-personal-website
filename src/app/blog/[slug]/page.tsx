@@ -12,6 +12,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
   // require("./tailwind.css");
   const post = await fetchBySlug(params.slug);
 
+  console.log(JSON.stringify(post, null, 2));
+
   if (!post) {
     return <div>404 Post not found :/</div>;
   }
@@ -26,6 +28,10 @@ export default async function Page({ params }: { params: { slug: string } }) {
   renderer.use(bookmarkPlugin(undefined));
 
   const html = await renderer.render(...blocks);
+  let title = "Untitled";
+  if ("rich_text" in post.properties.title) {
+    title = post.properties.title.rich_text[0].plain_text;
+  }
 
   return (
     <>
@@ -35,8 +41,37 @@ export default async function Page({ params }: { params: { slug: string } }) {
           <Link href="/">Back</Link>
         </div>
         <div className={style.content_wrapper}>
+          <div>
+            {"multi_select" in post.properties.tags &&
+              post.properties.tags.multi_select.map((tag: any) => (
+                <span key={tag.id}>{tag.name}</span>
+              ))}
+          </div>
+          <div>
+            <h1>{title}</h1>
+          </div>
+          <div className={style.post_subtags}>
+            <ul>
+              <li>
+                {"rich_text" in post.properties.time &&
+                  post.properties.time.rich_text[0].plain_text}
+              </li>
+              <li>
+                {"rich_text" in post.properties.level &&
+                  post.properties.level.rich_text[0].plain_text}
+              </li>
+              <li>
+                {new Date(post.created_time).toLocaleDateString("en-US", {
+                  year: "2-digit",
+                  month: "short",
+                  day: "numeric",
+                })}
+              </li>
+            </ul>
+          </div>
           <div
-            className="prose"
+            className={style.post_content}
+            // className="prose"
             dangerouslySetInnerHTML={{ __html: html }}
           ></div>
         </div>

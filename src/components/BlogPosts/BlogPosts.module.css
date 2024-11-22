@@ -16,9 +16,7 @@
 }
 
 /* posts */
-.post {
-  /* display: inline-flex; */
-}
+
 .posts {
   /* display: flex;
   justify-content: space-around; */
@@ -56,6 +54,7 @@
 
 .post_title {
   font-size: 1.5rem;
+  margin-bottom: 7px;
 }
 
 .post_subtitle {
