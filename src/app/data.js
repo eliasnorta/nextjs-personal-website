@@ -5,7 +5,7 @@ export const items = {
       image: "/projects/finkickz_banner.png",
       title: "Finkickz",
       date: 2023,
-      desc: `Buy and sell limited edition sneakers in Finland with ease.`,
+      desc: `An ecommerce platform for buying and selling limited edition sneakers in Finland.`,
 
       cta: "finkickz.com",
     },
