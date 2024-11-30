@@ -1,22 +1,21 @@
 // "use client";
 import React from "react";
-import { motion as m } from "framer-motion";
+import { motion as m, Variants } from "framer-motion";
 import style from "../Skills/skills.module.css";
 
 type AnimatedListProps = {
   items: any[];
+  variants?: Variants;
 };
 
-const MotionList: React.FC<AnimatedListProps> = ({ items }) => {
+const MotionList: React.FC<AnimatedListProps> = ({ items, variants }) => {
   return (
     <ul>
       {items.map((item, index) => (
         <m.li
           key={index}
-          initial={{ opacity: 0, translateY: 30 }}
-          whileInView={{ opacity: 1, translateY: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: index * 0.15 }}
+          variants={variants}
+          transition={{ duration: 1, delay: index * 0.2 }}
           className={style.skill_item}
         >
           {item}
