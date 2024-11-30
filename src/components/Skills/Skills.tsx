@@ -41,23 +41,6 @@ const Skills = forwardRef<HTMLDivElement>(({}, ref) => {
           </p>
           <div className={style.skills_container}>
             <div className={style.skills_group}>
-              <h2>Frameworks</h2>
-              <MotionList
-                items={skillsData.frameworks.map((framework) => (
-                  <div className={style.skill_item} key={framework.id}>
-                    <Image
-                      src={framework.icon}
-                      alt={framework.icon}
-                      width={50}
-                      height={50}
-                    />
-                    {framework.name}
-                  </div>
-                ))}
-              />
-            </div>
-
-            <div className={style.skills_group}>
               <h2>Languages</h2>
               <MotionList
                 items={skillsData.languages.map((language) => (
@@ -75,7 +58,24 @@ const Skills = forwardRef<HTMLDivElement>(({}, ref) => {
             </div>
 
             <div className={style.skills_group}>
-              <h2>Other related</h2>
+              <h2>Frameworks</h2>
+              <MotionList
+                items={skillsData.frameworks.map((framework) => (
+                  <div className={style.skill_item} key={framework.id}>
+                    <Image
+                      src={framework.icon}
+                      alt={framework.icon}
+                      width={50}
+                      height={50}
+                    />
+                    {framework.name}
+                  </div>
+                ))}
+              />
+            </div>
+
+            <div className={style.skills_group}>
+              <h2>Other</h2>
               <MotionList
                 items={skillsData.otherSkills.map((other) => (
                   <div className={style.skill_item} key={other.id}>
