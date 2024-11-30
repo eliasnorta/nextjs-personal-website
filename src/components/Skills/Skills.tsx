@@ -6,6 +6,7 @@ import style from "./skills.module.css";
 import Image from "next/image";
 import MotionWrapper from "../Animations/MotionWrapper";
 import MotionList from "../Animations/MotionList";
+import AnimatedSkillsCategoryItem from "../Animations/skills/MotionSkillscategory";
 
 type SkillsType = {
   frameworks: { id: number; name: string; icon: any }[];
@@ -30,6 +31,16 @@ const getData = (cat: keyof ItemsType) => {
 const Skills = ({ id }: { id: string }) => {
   const skillsData = getData("skills") as SkillsType;
 
+  const category = {
+    visible: { opacity: 1, translateY: 0 },
+    hidden: { opacity: 0, translateY: 30 },
+  };
+
+  const skillItem = {
+    visible: { opacity: 1, translateY: 0 },
+    hidden: { opacity: 0, translateY: 30 },
+  };
+
   return (
     <MotionWrapper id={id}>
       <section className={style.container}>
@@ -41,26 +52,13 @@ const Skills = ({ id }: { id: string }) => {
             interest today.
           </p>
           <div className={style.skills_container}>
-            <div className={style.skills_group}>
-              <h2>Frameworks</h2>
-              <MotionList
-                items={skillsData.frameworks.map((framework) => (
-                  <div className={style.skill_item} key={framework.id}>
-                    <Image
-                      src={framework.icon}
-                      alt={framework.icon}
-                      width={50}
-                      height={50}
-                    />
-                    {framework.name}
-                  </div>
-                ))}
-              />
-            </div>
-
-            <div className={style.skills_group}>
+            <AnimatedSkillsCategoryItem
+              variants={category}
+              className={style.skills_group}
+            >
               <h2>Languages</h2>
               <MotionList
+                variants={skillItem}
                 items={skillsData.languages.map((language) => (
                   <div className={style.skill_item} key={language.id}>
                     <Image
@@ -73,11 +71,36 @@ const Skills = ({ id }: { id: string }) => {
                   </div>
                 ))}
               />
-            </div>
+            </AnimatedSkillsCategoryItem>
 
-            <div className={style.skills_group}>
-              <h2>Other related</h2>
+            <AnimatedSkillsCategoryItem
+              variants={category}
+              className={style.skills_group}
+            >
+              <h2>Frameworks</h2>
               <MotionList
+                variants={skillItem}
+                items={skillsData.frameworks.map((framework) => (
+                  <div className={style.skill_item} key={framework.id}>
+                    <Image
+                      src={framework.icon}
+                      alt={framework.icon}
+                      width={50}
+                      height={50}
+                    />
+                    {framework.name}
+                  </div>
+                ))}
+              />
+            </AnimatedSkillsCategoryItem>
+
+            <AnimatedSkillsCategoryItem
+              variants={category}
+              className={style.skills_group}
+            >
+              <h2>Other</h2>
+              <MotionList
+                variants={skillItem}
                 items={skillsData.otherSkills.map((other) => (
                   <div className={style.skill_item} key={other.id}>
                     <Image
@@ -90,7 +113,7 @@ const Skills = ({ id }: { id: string }) => {
                   </div>
                 ))}
               />
-            </div>
+            </AnimatedSkillsCategoryItem>
           </div>
         </div>
       </section>

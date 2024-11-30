@@ -5,7 +5,7 @@ export const items = {
       image: "/projects/finkickz_banner.png",
       title: "Finkickz",
       date: 2023,
-      desc: `Buy and sell limited edition sneakers in Finland with ease.`,
+      desc: `An ecommerce platform for buying and selling limited edition sneakers in Finland.`,
 
       cta: "finkickz.com",
     },
@@ -65,61 +65,72 @@ export const items = {
     languages: [
       {
         id: 1,
-        name: "JavaScript",
-        icon: "/skills/javascript.svg",
-      },
-      {
-        id: 2,
-        name: "TypeScript",
-        icon: "/skills/typescript.svg",
-      },
-      {
-        id: 3,
-        name: "Java",
-        icon: "/skills/java.svg",
-      },
-      {
-        id: 4,
         name: "HTML",
         icon: "/skills/html5.svg",
       },
       {
-        id: 5,
+        id: 2,
         name: "CSS",
         icon: "/skills/css3.svg",
       },
       {
+        id: 3,
+        name: "JavaScript",
+        icon: "/skills/javascript.svg",
+      },
+      {
+        id: 4,
+        name: "TypeScript",
+        icon: "/skills/typescript.svg",
+      },
+      {
+        id: 5,
+        name: "Python",
+        icon: "/skills/python.svg",
+      },
+      {
         id: 6,
-        name: "Dart",
-        icon: "/skills/dart.svg",
+        name: "PHP",
+        icon: "/skills/php.svg",
       },
       {
         id: 7,
+        name: "Java",
+        icon: "/skills/java.svg",
+      },
+      {
+        id: 8,
         name: "C#",
         icon: "/skills/c-sharp.svg",
       },
       {
-        id: 8,
-        name: "PHP",
-        icon: "/skills/php.svg",
+        id: 9,
+        name: "Dart",
+        icon: "/skills/dart.svg",
       },
     ],
     otherSkills: [
       {
         id: 1,
-        name: "Wordpress",
-        icon: "/skills/wordpress.svg",
+        name: "Git",
+        icon: "/skills/git.svg",
       },
       {
         id: 2,
-        name: "GitHub",
-        icon: "/skills/github.svg",
+        name: "SQL",
+        icon: "/skills/sql.svg",
+      },
+      {
+        id: 4,
+        name: "Wordpress",
+        icon: "/skills/wordpress.svg",
       },
       {
         id: 3,
         name: "Figma",
         icon: "/skills/figma.svg",
       },
+      
     ],
   },
 };
