@@ -7,6 +7,8 @@ import Link from "next/link";
 import SimpleNavbar from "@/components/NavBar/NavBar_simple";
 // import "./tailwind.css";
 import style from "./style.module.css";
+import Image from "next/image";
+import Button from "@/components/Button/button";
 
 export default async function Page({ params }: { params: { slug: string } }) {
   // require("./tailwind.css");
@@ -39,36 +41,48 @@ export default async function Page({ params }: { params: { slug: string } }) {
       <section className={style.container}>
         <div>
           <Link href="/">Back</Link>
+          <Button text="Back" url="/" target="" />
         </div>
         <div className={style.content_wrapper}>
-          <div>
-            {"multi_select" in post.properties.tags &&
-              post.properties.tags.multi_select.map((tag: any) => (
-                <span key={tag.id}>{tag.name}</span>
-              ))}
+          <div className={style.title_area}>
+            <div className={style.tags}>
+              {"multi_select" in post.properties.tags &&
+                post.properties.tags.multi_select.map((tag: any) => (
+                  <span key={tag.id}>{tag.name}</span>
+                ))}
+            </div>
+            <div className={style.post_title}>
+              <h1>{title}</h1>
+            </div>
+            <div className={style.post_subtags}>
+              <ul>
+                <li className={style.read_time}>
+                  <Image
+                    src="/clock-svgrepo-com.svg"
+                    alt="clock_icon"
+                    width={15}
+                    height={15}
+                  />
+                  {"rich_text" in post.properties.time &&
+                    post.properties.time.rich_text[0].plain_text}
+                </li>
+                <li className={style.level}>
+                  Level:{" "}
+                  {"rich_text" in post.properties.level &&
+                    post.properties.level.rich_text[0].plain_text}
+                </li>
+                <li className={style.published_time}>
+                  Published:{" "}
+                  {new Date(post.created_time).toLocaleDateString("en-US", {
+                    year: "2-digit",
+                    month: "short",
+                    day: "numeric",
+                  })}
+                </li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <h1>{title}</h1>
-          </div>
-          <div className={style.post_subtags}>
-            <ul>
-              <li>
-                {"rich_text" in post.properties.time &&
-                  post.properties.time.rich_text[0].plain_text}
-              </li>
-              <li>
-                {"rich_text" in post.properties.level &&
-                  post.properties.level.rich_text[0].plain_text}
-              </li>
-              <li>
-                {new Date(post.created_time).toLocaleDateString("en-US", {
-                  year: "2-digit",
-                  month: "short",
-                  day: "numeric",
-                })}
-              </li>
-            </ul>
-          </div>
+
           <div
             className={style.post_content}
             // className="prose"

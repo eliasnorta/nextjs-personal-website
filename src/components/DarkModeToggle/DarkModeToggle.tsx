@@ -54,7 +54,7 @@ const DarkModeToggle = () => {
         }}
         className={styles.icon}
       >
-        <Image src={"/sun.svg"} alt="sun icon" width={15} height={15} />
+        <Image src={"/sun.svg"} alt="sun_icon" width={15} height={15} />
       </motion.div>
       <motion.div
         animate={{
