@@ -14,7 +14,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   // require("./tailwind.css");
   const post = await fetchBySlug(params.slug);
 
-  console.log(JSON.stringify(post, null, 2));
+  // console.log(JSON.stringify(post, null, 2));
 
   if (!post) {
     return <div>404 Post not found :/</div>;

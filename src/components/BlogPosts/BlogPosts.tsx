@@ -42,7 +42,7 @@ export default async function BlogPosts({ id }: { id: string }) {
     return <div>404 Post not found :/</div>;
   }
 
-  console.log("posts: " + posts);
+  // console.log("posts: " + posts);
 
   return (
     <section id={id} className={style.container}>
