@@ -5,9 +5,6 @@ import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
 import Link from "next/link";
 import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
 
-// for detecting section that is in view
-// type SectionType = "projects" | "skills" | "contact" | null;
-
 interface Section {
   label: string;
   id: string;
@@ -18,53 +15,12 @@ interface NavbarProps {
 }
 
 const Navbar = ({ sections }: NavbarProps) => {
-  // the active section
-  // const [activeSection, setActiveSection] = useState<SectionType>(null);
-
-  // handle which section is in view using intersectionobserver
-  // useEffect(() => {
-  //   const options = {
-  //     rootMargin: "-30%",
-  //   };
-
-  // observer for projects section
-  // const projectsObserver = new IntersectionObserver(([entry]) => {
-  //   setActiveSection(entry.isIntersecting ? "projects" : null);
-  // }, options);
-  // projectsObserver.observe(projectsSection.current);
-
-  // observer for skills section
-  // const skillsObserver = new IntersectionObserver(([entry]) => {
-  //   setActiveSection(entry.isIntersecting ? "skills" : null);
-  // }, options);
-  // skillsObserver.observe(skillsSection.current);
-
-  // observer for cotact section
-  // const contactObserver = new IntersectionObserver(([entry]) => {
-  //   setActiveSection(entry.isIntersecting ? "contact" : null);
-  // }, options);
-  // contactObserver.observe(contactSection.current);
-
-  //   return () => {
-  //     projectsObserver.disconnect();
-  //     // skillsObserver.disconnect();
-  //     // contactObserver.disconnect();
-  //   };
-  // }, []);
-
-  // scroll to section on click
-  // const scrollToSection = (sectionRef: any) => {
-  //   sectionRef.current.scrollIntoView({
-  //     behavior: "smooth",
-  //   });
+  // const handleScroll = (id: string) => {
+  //   const element = document.getElementById(id);
+  //   if (element) {
+  //     element.scrollIntoView({ behavior: "smooth" });
+  //   }
   // };
-
-  const handleScroll = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <header className={style.header}>
@@ -75,7 +31,7 @@ const Navbar = ({ sections }: NavbarProps) => {
         >
           <Link href="/">
             <Image
-              src="eliasnorta_icon.svg"
+              src="/eliasnorta_icon.svg"
               alt="Logo"
               width={30}
               height={35}
@@ -93,7 +49,7 @@ const Navbar = ({ sections }: NavbarProps) => {
                   //   handleScroll(section.id);
                   // }}
                 >
-                  <Link href={"#" + section.id}>{section.label}</Link>
+                  <Link href={"/#" + section.id}>{section.label}</Link>
                   {/* {section.label} */}
                 </li>
               ))}

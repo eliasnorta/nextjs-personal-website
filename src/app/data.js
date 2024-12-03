@@ -1,3 +1,10 @@
+export const sections = [
+  { label: "Blog", id: "blog" },
+  { label: "Projects", id: "projects" },
+  { label: "Skills", id: "skills" },
+  { label: "Contact", id: "contact" },
+];
+
 export const items = {
   projects: [
     {

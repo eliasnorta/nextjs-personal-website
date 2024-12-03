@@ -42,8 +42,8 @@ const Skills = ({ id }: { id: string }) => {
   };
 
   return (
-    <MotionWrapper id={id}>
-      <section className={style.container}>
+    <MotionWrapper>
+      <section id={id} className={style.container}>
         <div className={style.wrapper}>
           <h1 className={style.title}>MY SKILLS AND EXPERIENCE</h1>
           <p className={style.desc}>

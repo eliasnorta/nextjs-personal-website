@@ -5,8 +5,8 @@ import MotionWrapper from "../Animations/MotionWrapper";
 
 const Contact = ({ id }: { id: string }) => {
   return (
-    <MotionWrapper id={id}>
-      <section className={style.container}>
+    <MotionWrapper>
+      <section id={id} className={style.container}>
         <div className={style.wrapper}>
           <h1 className={style.title}>Get in touch</h1>
           <div className={style.form_container}>

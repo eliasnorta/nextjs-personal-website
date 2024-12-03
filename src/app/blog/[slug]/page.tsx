@@ -9,6 +9,8 @@ import SimpleNavbar from "@/components/NavBar/NavBar_simple";
 import style from "./style.module.css";
 import Image from "next/image";
 import Button from "@/components/Button/button";
+import Navbar from "@/components/NavBar/Navbar";
+import { sections } from "@/app/data";
 
 export default async function Page({ params }: { params: { slug: string } }) {
   // require("./tailwind.css");
@@ -37,12 +39,13 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      <SimpleNavbar />
+      {/* <SimpleNavbar /> */}
+      <Navbar sections={sections} />
       <section className={style.container}>
-        <div>
+        {/* <div>
           <Link href="/">Back</Link>
           <Button text="Back" url="/" target="" />
-        </div>
+        </div> */}
         <div className={style.content_wrapper}>
           <div className={style.title_area}>
             <div className={style.tags}>

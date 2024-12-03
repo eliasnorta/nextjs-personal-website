@@ -14,18 +14,19 @@
   display: flex;
   gap: 5px;
   margin-bottom: 0.3rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--text-color);
 }
 .post_title {
   margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .post_subtags ul {
   display: flex;
   gap: 15px;
   list-style-type: none;
+  flex-wrap: wrap;
 }
 .post_subtags ul li {
   padding: 5px 12px;
@@ -34,6 +35,9 @@
   display: flex;
   align-items: center;
   gap: 7px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  
 }
 .post_subtags .read_time {
   background-color: #A623BC;

@@ -4,15 +4,9 @@ import Contact from "@/components/Contact/Contact";
 import Hero from "@/components/Hero/Hero";
 import Navbar from "@/components/NavBar/Navbar";
 import BlogPosts from "@/components/BlogPosts/BlogPosts";
+import { sections } from "./data";
 
 export default async function Home() {
-  const sections = [
-    { label: "Blog", id: "blog" },
-    { label: "Projects", id: "projects" },
-    { label: "Skills", id: "skills" },
-    { label: "Contact", id: "contact" },
-  ];
-
   return (
     <main>
       <Navbar sections={sections} />
