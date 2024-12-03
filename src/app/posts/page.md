@@ -1,13 +1,20 @@
-# How to deploy a website for free and jam stack
 
-Date: November 7, 2024 7:06 PM
-tags: #blog, #github, #webdev
-BannerImageUrl: https://cdn.pixabay.com/photo/2024/08/22/09/07/ai-generated-8988762_1280.jpg
-Status: Live
-level: Beginner
-slug: deploy-a-website-for-free
-time: 5 min read
-title: How to deploy your website for free
+
+---
+date: "November 7, 2024 7:06 PM"
+tags: 
+  - blog
+  - github
+  - webdev
+bannerImageUrl: "https://cdn.pixabay.com/photo/2024/08/22/09/07/ai-generated-8988762_1280.jpg"
+status: "Live"
+level: "Beginner"
+slug: "deploy-a-website-for-free"
+time: "5 min read"
+title: "How to deploy your website for free"
+---
+
+# How to deploy a website for free and jam stack
 
 TL;DR:
 
