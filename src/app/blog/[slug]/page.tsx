@@ -54,16 +54,18 @@ export default async function Page({ params }: { params: { slug: string } }) {
       <Navbar sections={sections} />
       <section className={style.container}>
         <div className={style.back_button}>
-          <Link href="/">&lt; Back</Link>
+          <Link href="/#blog">&lt; Back</Link>
           {/* <Button text="Back" url="/" target="" /> */}
         </div>
         <div className={style.content_wrapper}>
           <div className={style.title_area}>
             <div className={style.tags}>
               <ul>
-                {data.frontmatter.tags.map((tag: string) => (
-                  <li key={tag}>#{tag}</li>
-                ))}
+                {data.frontmatter.tags &&
+                  data.frontmatter.tags.length > 0 &&
+                  data.frontmatter.tags.map((tag: string) => (
+                    <li key={tag}>#{tag}</li>
+                  ))}
               </ul>
             </div>
             <div className={style.post_title}>
