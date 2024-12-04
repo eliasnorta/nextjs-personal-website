@@ -5,7 +5,7 @@ import Image from "next/image";
 import Button from "@/components/Button/button";
 import Navbar from "@/components/NavBar/Navbar";
 import { sections } from "@/app/data";
-import { MDXRemote, compileMDX } from "next-mdx-remote/rsc";
+import { compileMDX } from "next-mdx-remote/rsc";
 import { promises as fs } from "fs";
 import path from "path";
 
@@ -26,22 +26,22 @@ export async function generateMetadata({
   });
 
   return {
-    title: `${frontmatter.title}`,
+    title: `${frontmatter.title} - Blog | Elias Norta`,
   };
 }
 
 export default async function Page({ params }: { params: { slug: string } }) {
-  const post = "Hello world";
-
   const content = await fs.readFile(
     path.join(process.cwd(), "src/app/posts", `${params.slug}.mdx`),
     "utf-8"
   );
+
   const data = await compileMDX<{
     title: string;
     time: String;
     published: string;
     level: string;
+    tags: any;
   }>({
     source: content,
     options: {
@@ -53,19 +53,22 @@ export default async function Page({ params }: { params: { slug: string } }) {
     <>
       <Navbar sections={sections} />
       <section className={style.container}>
-        {/* <div>
-          <Link href="/">Back</Link>
-          <Button text="Back" url="/" target="" />
-        </div> */}
+        <div className={style.back_button}>
+          <Link href="/">&lt; Back</Link>
+          {/* <Button text="Back" url="/" target="" /> */}
+        </div>
         <div className={style.content_wrapper}>
           <div className={style.title_area}>
             <div className={style.tags}>
-              {/* {"multi_select" in post.properties.tags &&
-                post.properties.tags.multi_select.map((tag: any) => (
-                  <span key={tag.id}>{tag.name}</span>
-                ))} */}
+              <ul>
+                {data.frontmatter.tags.map((tag: string) => (
+                  <li key={tag}>#{tag}</li>
+                ))}
+              </ul>
             </div>
-            <div className={style.post_title}>{data.frontmatter.title}</div>
+            <div className={style.post_title}>
+              <h1>{data.frontmatter.title}</h1>
+            </div>
             <div className={style.post_subtags}>
               <ul>
                 <li className={style.read_time}>
@@ -77,7 +80,17 @@ export default async function Page({ params }: { params: { slug: string } }) {
                   />
                   {data.frontmatter.time}
                 </li>
-                <li className={style.level}>Level: {data.frontmatter.level}</li>
+                <li
+                  className={`${style.level} ${
+                    data.frontmatter.level === "Beginner"
+                      ? style.beginner
+                      : data.frontmatter.level === "Intermediate"
+                      ? style.intermediate
+                      : ""
+                  }`}
+                >
+                  Level: {data.frontmatter.level}
+                </li>
                 <li className={style.published_time}>
                   Published:{" "}
                   {new Date(data.frontmatter.published).toLocaleDateString(

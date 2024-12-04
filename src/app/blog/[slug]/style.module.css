@@ -3,6 +3,17 @@
   max-width: 700px;
   width: 80%;
   padding: 3em 0;
+  margin-top: -30px;
+}
+
+.back_button {
+  margin-bottom: 30px;
+  color: grey;
+  text-underline-position: under;
+  display: inline-block;
+}
+.back_button:hover {
+  text-decoration: underline;
 }
 
 /* post title area */
@@ -10,20 +21,22 @@
   margin-bottom: 3rem;
 }
 
-.tags {
+.tags ul {
   display: flex;
   gap: 5px;
   margin-bottom: 0.3rem;
   font-size: 1rem;
   color: var(--text-color);
+  list-style-type: none;
 }
 .post_title {
-  margin-bottom: 1.5rem;
-  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .post_subtags ul {
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
   list-style-type: none;
   flex-wrap: wrap;
@@ -42,9 +55,17 @@
 .post_subtags .read_time {
   background-color: #A623BC;
 }
-.post_subtags .level {
+/* add color for level depending on the level */
+/* .post_subtags .level {
+  background-color: #474747;
+} */
+.post_subtags .beginner {
   background-color: #0E8B0C;
 }
+.post_subtags .intermediate {
+  background-color: #a28c00;
+}
+
 .post_subtags .published_time {
   background-color: #818181;
 }
