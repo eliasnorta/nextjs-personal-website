@@ -14,37 +14,18 @@ export const items = {
       date: 2023,
       desc: `An ecommerce platform for buying and selling limited edition sneakers in Finland.`,
 
-      cta: "finkickz.com",
+      cta_link: "finkickz.com",
+      cta_label: "finkickz.com"
     },
     {
       id: 2,
       image: "/projects/ZOF_BANNER_2.png",
       title: "Zone of War",
       date: 2022,
-      desc: `An action-packed first-person shooter and strategy game! Shoot and battle in different worlds and find your way back to your crew.
-
-      Visit the Steam page <a href="https://store.steampowered.com/app/1488000/Zone_Of_War/" target="_blank" rel="noopener noreferrer nofollow" style="text-decoration:underline; color: royalblue;">here</a>.`,
-      cta: "zoneofwar.com",
+      desc: `An action-packed first-person shooter and strategy game! Shoot and battle in different worlds! Find your way back to your crew.`,
+      cta_link: "store.steampowered.com/app/1488000/Zone_Of_War/",
+      cta_label: "Visit on Steam"
     },
-    // {
-    //   id: 3,
-    //   image: "/projects/thumbnail_Taitaja2023.png",
-    //   title: "Taitaja 2023 Web-Dev",
-    //   date: 2023,
-    //   desc: `I participated in the Taitaja 2023 Web-dev semiginal competition.`,
-    //   cta: "taitaja2023.fi",
-    // },
-    // {
-    //   id: 4,
-    //   image: "/projects/webstore_home-design.png",
-    //   title: "React e-commerce",
-    //   date: 2020,
-    //   desc: `An Amazon-like e-commerce store built using React.
-
-    //   The website includes functionalities such as adding products to cart, private routing and login functionality with Firebase. Using react router v6.
-      
-    //   Visit the GitHub repository <a href="/" target="_blank" rel="noopener noreferrer nofollow" style="text-decoration:underline; color: royalblue;">here</a>.`,
-    // },
   ],
   skills: {
     frameworks: [
@@ -141,7 +122,3 @@ export const items = {
     ],
   },
 };
-
-// items.projects.forEach((project) => {
-//   project.desc = project.desc.replace(/\n/g, "<br>");
-// });

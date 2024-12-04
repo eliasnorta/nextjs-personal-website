@@ -16,7 +16,8 @@ type ItemType = {
   date: number;
   image: any;
   desc: string;
-  cta: string;
+  cta_link: string;
+  cta_label: string;
 };
 
 type ItemsType = {
@@ -49,22 +50,26 @@ function Projects({ id }: { id: string }) {
                   <Image src={item.image} alt={item.image} fill={true} />
                 </div>
                 <div className={style.text_container}>
-                  <h1 className={style.projects_title}>{item.title}</h1>
-                  {/* <small className={style.projects_date}>{item.date}</small> */}
-                  <p
-                    className={style.projects_description}
-                    dangerouslySetInnerHTML={{ __html: item.desc }}
-                  ></p>
-                  {item.cta && (
-                    <div className={style.button_container}>
-                      <Button
-                        text={item.cta}
-                        url={`https://` + item.cta}
-                        target="_blank"
-                        icon={<FaExternalLinkAlt />}
-                      />{" "}
-                    </div>
-                  )}
+                  <div>
+                    <h1 className={style.projects_title}>{item.title}</h1>
+                    {/* <small className={style.projects_date}>{item.date}</small> */}
+                    <p
+                      className={style.projects_description}
+                      dangerouslySetInnerHTML={{ __html: item.desc }}
+                    ></p>
+                  </div>
+                  <div>
+                    {item.cta_link && (
+                      <div className={style.button_container}>
+                        <Button
+                          text={item.cta_label}
+                          url={`https://` + item.cta_link}
+                          target="_blank"
+                          icon={<FaExternalLinkAlt />}
+                        />{" "}
+                      </div>
+                    )}
+                  </div>
                 </div>
               </MotionProjectItem>
             ))}
