@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import style from "./hamburgerMenu.module.css";
+import Link from "next/link";
 
 const HamburgerMenu = ({ sections }: { sections: any }) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -62,8 +63,8 @@ const HamburgerMenu = ({ sections }: { sections: any }) => {
       >
         <ul>
           {sections.map((section: any, index: any) => (
-            <li key={index} onClick={() => scrollToSection(section.ref)}>
-              {section.label}
+            <li key={index} onClick={() => setNavbarOpen(false)}>
+              <Link href={"/#" + section.id}>{section.label}</Link>
             </li>
           ))}
         </ul>

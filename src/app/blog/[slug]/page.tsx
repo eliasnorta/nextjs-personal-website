@@ -96,7 +96,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                   {new Date(data.frontmatter.published).toLocaleDateString(
                     "en-US",
                     {
-                      year: "2-digit",
+                      year: "numeric",
                       month: "short",
                       day: "numeric",
                     }
