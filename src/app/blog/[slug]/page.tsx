@@ -8,6 +8,10 @@ import { sections } from "@/app/data";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { promises as fs } from "fs";
 import path from "path";
+import rehypeShiki from "@shikijs/rehype";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+import { unified } from "unified";
 
 export async function generateMetadata({
   params,
@@ -36,9 +40,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
     "utf-8"
   );
 
-  const data = await compileMDX<{
+  const { content: mdxContent, frontmatter } = await compileMDX<{
     title: string;
-    time: String;
+    time: string;
     published: string;
     level: string;
     tags: any;
@@ -46,8 +50,23 @@ export default async function Page({ params }: { params: { slug: string } }) {
     source: content,
     options: {
       parseFrontmatter: true,
+      mdxOptions: {
+        rehypePlugins: [
+          [
+            rehypeShiki,
+            {
+              theme: "dark-plus",
+            },
+          ],
+        ],
+      },
     },
   });
+
+  const data = {
+    content: mdxContent,
+    frontmatter,
+  };
 
   return (
     <>
