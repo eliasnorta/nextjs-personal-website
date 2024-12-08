@@ -1,18 +1,103 @@
-# Testing markdown
+---
+title: "MDX example"
+type: "Tutorial"
+time: "5 min read"
+tags: 
+  - blog
+  - NextJS
+  - webdev
+  - MDX
+level: "Beginner"
+published: "December 4, 2024 7:06 PM"
+---
 
-Date: December 4, 2024 3:10 PM
-Status: Created
+## Example of headers:
 
-# Lorem Ipsum
+# H1 Header
+## H2 Header
+### H3 Header
+#### H4 Header
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+---
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## Text Formatting:
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+**Bold Text:** `**Bold Text**`  
+*Italic Text:* `*Italic Text*`  
+**_Bold and Italic:_** `**_Bold and Italic_**`  
+~~Strikethrough~~: `~~Strikethrough~~`  
 
-> Lorem Ipsum is cool
-> 
+---
+
+## **Lists:**
+
+### Unordered List:
+- Item 1
+  - Sub-item 1.1
+- Item 2
+  - Sub-item 2.1
+
+### Ordered List:
+1. First Item
+   1. Sub-item 1.1
+2. Second Item
+   1. Sub-item 2.1
+
+---
+
+## **Links:**
+[OpenAI](https://www.openai.com)
+
+---
+
+## **Images:**
+
+![Markdown Logo](https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)
+
+---
+
+## **Blockquote:**
+
+> "This is a blockquote."  
+> – Someone Famous
+
+
+## Highlight:
+
+**!Dont seem to work with next-mdx-remote**
+
+I need to highlight these ==very important words==.
+
+## Checkboxes:
+**!Dont seem to work with next-mdx-remote**
+
+- [x] requires list syntax (supports all list types)
+- [x] this item is completed
+- [ ] this item is pending
+
+## Callout box:
+
+<aside>
+  This is an aside
+</aside>
+
+## Tables:
+**!Dont seem to work with next-mdx-remote**
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| `name` | string | Name of the resource |
+| `path` | string | Path to the resource |
+
+## **Code Formatting:**
+
+### Inline Code:
+Use the command `git clone` to clone a repository.
+
+### Code Block:
+```python
+def greet(name):
+    print(f"Hello, {name}!")
 
 ---
 
@@ -47,6 +132,120 @@ function App() {
 export default App;
 ```
 
-- Lorem Ipsum
-    - Lorem Lorem
-- Ipsum Ipsum
+---
+
+# Markdown Cheat Sheet
+
+Thanks for visiting [The Markdown Guide](https://www.markdownguide.org)!
+
+This Markdown cheat sheet provides a quick overview of all the Markdown syntax elements. It can’t cover every edge case, so if you need more information about any of these elements, refer to the reference guides for [basic syntax](https://www.markdownguide.org/basic-syntax/) and [extended syntax](https://www.markdownguide.org/extended-syntax/).
+
+## Basic Syntax
+
+These are the elements outlined in John Gruber’s original design document. All Markdown applications support these elements.
+
+### Heading
+
+# H1
+## H2
+### H3
+
+### Bold
+
+**bold text**
+
+### Italic
+
+*italicized text*
+
+### Blockquote
+
+> blockquote
+
+### Ordered List
+
+1. First item
+2. Second item
+3. Third item
+
+### Unordered List
+
+- First item
+- Second item
+- Third item
+
+### Code
+
+`code`
+
+### Horizontal Rule
+
+---
+
+### Link
+
+[Markdown Guide](https://www.markdownguide.org)
+
+### Image
+
+![alt text](https://www.markdownguide.org/assets/images/tux.png)
+
+## Extended Syntax
+
+These elements extend the basic syntax by adding additional features. Not all Markdown applications support these elements.
+
+### Table
+
+| Syntax | Description |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text |
+
+### Fenced Code Block
+
+```
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
+
+### Footnote
+
+Here's a sentence with a footnote. [^1]
+
+[^1]: This is the footnote.
+
+### Definition List
+
+term
+: definition
+
+### Strikethrough
+
+~~The world is flat.~~
+
+### Task List
+
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
+
+### Emoji
+
+That is so funny! :joy:
+
+(See also [Copying and Pasting Emoji](https://www.markdownguide.org/extended-syntax/#copying-and-pasting-emoji))
+
+### Highlight
+
+I need to highlight these ==very important words==.
+
+### Subscript
+
+H~2~O
+
+### Superscript
+
+X^2^
