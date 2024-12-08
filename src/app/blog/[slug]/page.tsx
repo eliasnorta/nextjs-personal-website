@@ -9,10 +9,8 @@ import { compileMDX } from "next-mdx-remote/rsc";
 import { promises as fs } from "fs";
 import path from "path";
 import rehypeShiki from "@shikijs/rehype";
-import remarkParse from "remark-parse";
-import remarkRehype from "remark-rehype";
-import { unified } from "unified";
 
+// metadata
 export async function generateMetadata({
   params,
 }: {
